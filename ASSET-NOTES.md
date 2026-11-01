@@ -7,3 +7,5 @@ Completion screenshots were supplied in the portfolio handoff. They show complet
 Issuer and technology logos identify their respective organizations and tools. They do not imply endorsement. Original source/provenance details from the retained site are in `seed/logo-sources.json`. Simple Icons license is in `SIMPLE-ICONS-LICENSE.md`; Three.js license is in `THREE-LICENSE.txt`. Original custom hardware icons and procedural 3D geometry are retained from the site.
 
 No employer source code, private infrastructure topology, client data or claimed production metrics are included.
+
+Halloween scenery in `frontend/public/assets/seasonal` consists of original SVG illustrations authored for this project. It uses no remote image service.

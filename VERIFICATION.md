@@ -32,3 +32,7 @@
 ## Repository layout
 
 Migrated into `frontend`, `backend` and `shared` npm workspaces. Dependencies are installed from one root lockfile. Frontend build output, uploaded files, private environments, temporary demo login and node_modules are excluded from Git. Backend configuration resolves repository-root or backend-local environment files independently of the working directory.
+
+## Enhanced Halloween mode
+
+Added locally authored SVG scenery, a moon, bats, pumpkins, animated aurora/fog/fireflies and coordinated dark project-card colors. Desktop and 390px mobile previews were inspected; all scenery assets loaded and neither view had horizontal overflow. Mobile uses fewer fireflies. Existing motion/decor switches and system reduced-motion CSS cover the atmosphere. The temporary `theme=halloween` URL preview does not write to MongoDB; unsaved admin edits were confirmed intact during preview.

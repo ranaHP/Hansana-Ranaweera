@@ -1,0 +1,80 @@
+/* Halloween is isolated from the original, Christmas and custom themes. */
+html[data-theme=halloween]{color-scheme:dark}
+html[data-theme=halloween] body{background:#100e19}
+html[data-theme=halloween] .cms-portfolio{position:relative;isolation:isolate}
+html[data-theme=halloween] .cms-portfolio>.header,html[data-theme=halloween] .cms-portfolio>.layout{position:relative;z-index:1}
+html[data-theme=halloween] .cms-portfolio>.header{position:sticky;background:#110e1bdc;border-color:#3e304a;box-shadow:0 1px 30px #08061033}
+.halloween-atmosphere{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse at 82% 5%,#42224842,transparent 48%),linear-gradient(150deg,#100e19,#171020 60%,#110e1b)}
+.halloween-aurora{position:absolute;border-radius:50%;filter:blur(65px);opacity:.28;will-change:transform;animation:haunt-aurora 25s ease-in-out infinite alternate}
+.aurora-purple{width:70vw;height:65vh;right:-28vw;top:8vh;background:radial-gradient(ellipse,#8f4fc1,transparent 67%)}
+.aurora-amber{width:60vw;height:55vh;left:-34vw;top:52vh;background:radial-gradient(ellipse,#cf6f33,transparent 68%);animation-delay:-12s;opacity:.15}
+.halloween-starfield{position:absolute;inset:0;opacity:.25;background-image:radial-gradient(1px 1px at 13% 20%,#f7d6a5 90%,transparent),radial-gradient(1px 1px at 72% 64%,#c6b4e3 90%,transparent),radial-gradient(1px 1px at 41% 85%,#f7d6a5 90%,transparent);background-size:270px 310px,370px 290px,430px 410px}
+.halloween-fog{position:absolute;left:-20%;width:140%;height:30vh;background:radial-gradient(ellipse,#a28ab40d,transparent 65%);animation:haunt-fog 32s ease-in-out infinite alternate;will-change:transform}
+.fog-one{bottom:4%}.fog-two{top:22%;animation-delay:-15s;opacity:.5}
+.halloween-firefly{position:absolute;width:3px;height:3px;border-radius:50%;background:#e6ac6d;box-shadow:0 0 10px #f4ac64;opacity:0;animation:haunt-firefly 10s ease-in-out infinite;will-change:transform,opacity}
+html[data-theme=halloween] .cms-portfolio.cms-portfolio .hero{position:relative;background:radial-gradient(ellipse at 85% 12%,#6b3c4b30,transparent 53%),linear-gradient(135deg,#241c31,#20192c 65%,#302032);border-color:#5d3c4c;box-shadow:0 24px 100px #0002,inset 0 1px #e9b56b0c}
+html[data-theme=halloween] .hero h1{color:#fff1df;text-shadow:0 2px 30px #ecb7710c}
+html[data-theme=halloween] .hero h1>span,html[data-theme=halloween] .brand i{color:#f4ac64}
+html[data-theme=halloween] .hero-line em{color:#d5b6d3}
+html[data-theme=halloween] .hero-focus,html[data-theme=halloween] .current-role>span{color:#c2adcb}
+html[data-theme=halloween] .hero-copy>.eyebrow{color:#f1b477}
+html[data-theme=halloween] .cms-portfolio .button.primary{background:#efa464;color:#241422;border:1px solid #ffcb91;box-shadow:0 6px 24px #d87e2e25}
+html[data-theme=halloween] .cms-portfolio .button.primary:hover{background:#ffd19a;box-shadow:0 6px 30px #efa4643d}
+html[data-theme=halloween] .cms-portfolio .button:not(.primary){background:#20182b66;border-color:#6a4e67;color:#f7e5d3}
+html[data-theme=halloween] .cms-portfolio .utility-dock{background:#20192eeb;border-color:#59435d;box-shadow:0 8px 28px #0005}
+html[data-theme=halloween] .hero-portrait .portrait-tech{background:transparent}
+html[data-theme=halloween] .hero-portrait .planning-sheet{opacity:.08}
+html[data-theme=halloween] .hero-portrait .fintech-sheet{opacity:.16;color:#d9aac4}
+html[data-theme=halloween] .hero-tech-icon>span{color:#d5bedb}
+html[data-theme=halloween] .hero-portrait picture{filter:drop-shadow(0 0 26px #f1a36316)}
+.halloween-portrait-scene{position:absolute;inset:-10px -25px -40px;z-index:0;pointer-events:none;overflow:hidden;mask-image:linear-gradient(to right,transparent,#000 10%)}
+.halloween-landscape{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72}
+.halloween-moon{position:absolute;top:3%;right:6%;width:clamp(120px,16vw,208px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 36% 32%,#fff3ce,#f2c994 60%,#cf8e6c);box-shadow:0 0 0 16px #f0b88106,0 0 0 42px #f0b88104,0 0 95px #eda96530;opacity:.85;animation:haunt-moon 10s ease-in-out infinite alternate}
+.halloween-moon span{position:absolute;inset:0;background:radial-gradient(ellipse at 70% 25%,#d297771f 0 12%,transparent 13%),radial-gradient(ellipse at 27% 60%,#9c697215 0 16%,transparent 17%);border-radius:50%}
+.halloween-moon i{position:absolute;width:15%;height:12%;border-radius:50%;background:#a3726c16;left:23%;top:24%}.halloween-moon i:nth-of-type(2){left:57%;top:65%;width:20%;height:15%}.halloween-moon i:nth-of-type(3){left:70%;top:33%;width:9%;height:7%}
+.halloween-orbit{position:absolute;width:80%;height:50%;border:1px solid #c38dad20;border-radius:50%;top:24%;left:12%;transform:rotate(-28deg)}
+.halloween-bat{position:absolute;width:42px;opacity:.75;animation:haunt-bat 9s ease-in-out infinite alternate;will-change:transform}
+.bat-0{right:1%;top:20%;width:38px;animation-delay:-3s}.bat-1{left:8%;top:12%;width:26px;animation-delay:-6s}.bat-2{right:12%;top:7%;width:22px;animation-duration:13s}
+.halloween-pumpkin{position:absolute;bottom:1%;filter:drop-shadow(0 0 13px #e590482c);animation:haunt-lantern 5s ease-in-out infinite alternate}
+.pumpkin-large{right:0;width:90px;transform:rotate(6deg)}.pumpkin-small{left:0;bottom:2%;width:62px;transform:rotate(-8deg);animation-delay:-2s}
+html[data-theme=halloween] .cms-portfolio .work-art{background:radial-gradient(ellipse at 50% 30%,#513547,#261e36);border-color:#51394d}
+html[data-theme=halloween] .work-art small{color:#c3a8c4}
+html[data-theme=halloween] .cms-portfolio .lab-section{background:#241b30;border:1px solid #45334d}
+html[data-theme=halloween] .cms-portfolio .lab-item{background:transparent}
+html[data-theme=halloween] .cms-portfolio .lab-item>button,html[data-theme=halloween] .cms-portfolio .method-steps{background:#231c30;border-color:#4a3751;color:#f8eadc}
+html[data-theme=halloween] .cms-portfolio .lab-item>button:hover,html[data-theme=halloween] .cms-portfolio .note-item>button:hover{background:#34243b;color:#fff1df}
+html[data-theme=halloween] .cms-portfolio .method-steps [aria-pressed=true],html[data-theme=halloween] .credential-tabs [aria-pressed=true],html[data-theme=halloween] .lab-filter [aria-pressed=true]{background:#d99158;color:#211525}
+html[data-theme=halloween] .cms-portfolio .credential-item{background:linear-gradient(145deg,#2b2137,#221c2e);border-color:#4c3751}
+html[data-theme=halloween] .credential-brand>img{background:#f8f5f0;padding:5px 8px;border-radius:4px;height:36px}
+html[data-theme=halloween] .credential-brand>span,html[data-theme=halloween] .credential-evidence,html[data-theme=halloween] .lab-status,html[data-theme=halloween] .timeline-company,html[data-theme=halloween] .recognition time{color:#d1b5cf}
+html[data-theme=halloween] .portrait-note>p{background:#100e19;color:#c4aecf}
+html[data-theme=halloween] .method-number{color:#9673a0}
+@keyframes haunt-aurora{to{transform:translate3d(-6vw,6vh,0) scale(1.15)}}
+@keyframes haunt-fog{to{transform:translate3d(9%,0,0)}}
+@keyframes haunt-firefly{0%,100%{opacity:0;transform:translate3d(0,15px,0)}40%,65%{opacity:.45}80%{transform:translate3d(18px,-38px,0);opacity:.12}}
+@keyframes haunt-bat{to{transform:translate3d(-20px,-9px,0) rotate(-9deg)}}
+@keyframes haunt-moon{to{filter:brightness(1.08);transform:translate3d(0,-3px,0)}}
+@keyframes haunt-lantern{to{filter:drop-shadow(0 0 21px #e5904850) brightness(1.08)}}
+@media(max-width:650px){.halloween-portrait-scene{inset:0 -20px -30px}.halloween-moon{width:120px;right:6%;top:0}.pumpkin-large{width:62px;right:1%}.pumpkin-small{width:42px}.halloween-bat{width:28px}.halloween-aurora{filter:blur(35px)}.halloween-firefly:nth-last-child(-n+8){display:none}}
+@media(prefers-reduced-motion:reduce){.halloween-atmosphere *,.halloween-portrait-scene *{animation:none!important;will-change:auto}.halloween-firefly{opacity:.18}}
+html[data-motion=off] .halloween-firefly{opacity:.18}
+/* Keep scenery images independent of the portrait image's full-size rules. */
+html[data-theme=halloween] .cms-portfolio .hero-portrait .halloween-pumpkin{width:90px;height:auto;object-fit:contain}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .pumpkin-small{width:62px}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .halloween-bat{width:42px;height:auto;object-fit:contain}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .bat-0{width:38px}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .bat-1{width:26px}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .bat-2{width:22px}
+@media(max-width:650px){html[data-theme=halloween] .cms-portfolio .hero-portrait .pumpkin-large{width:62px}html[data-theme=halloween] .cms-portfolio .hero-portrait .pumpkin-small{width:42px}html[data-theme=halloween] .cms-portfolio .hero-portrait .halloween-bat{width:26px}}
+html[data-theme=halloween] .cms-portfolio>.header{z-index:30}
+html[data-theme=halloween] .cms-portfolio .work-open,html[data-mode=quick][data-theme=halloween] .cms-portfolio .work-card:first-child .work-open{background:#251d32;border-color:#533b55;color:#fff1df}
+html[data-theme=halloween] .cms-portfolio .work-open:hover{border-color:#c68d72;box-shadow:0 16px 45px #07040d33;color:#fff1df}
+html[data-theme=halloween] .section-heading h2 em,html[data-theme=halloween] .contact-section h2 em{color:#ccb1cd}
+html[data-theme=halloween] .tags span{color:#d4bfd8;border-color:#63496a;background:#ffffff04}
+html[data-theme=halloween] .work-bottom{color:#d8b0cb}
+html[data-theme=halloween] .work-art .mini-system i{background:#c7b0cd}
+html[data-theme=halloween] .work-art .mini-system i:nth-child(2){background:#8a6c9d}
+html[data-theme=halloween] .work-art .mini-system i:nth-child(3){background:#efa464}
+html[data-theme=halloween] .cms-portfolio .world-controls{background:#251d32eb;border-color:#685074}
+html[data-theme=halloween] .cms-portfolio .world-controls [aria-pressed=true]{background:#e5a16a;color:#211525}
+html[data-theme=halloween] .world-topline,html[data-theme=halloween] .world-label{color:#e3ccdf}
