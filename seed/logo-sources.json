@@ -1,0 +1,62 @@
+[
+  {
+    "file": "ibm.svg",
+    "url": "https://www.ibm.com/design/language/2285fa814297ab5eb0ffa21d2ee009db/ibm.svg",
+    "bytes": 6609
+  },
+  {
+    "file": "deeplearning-ai.png",
+    "url": "https://www.deeplearning.ai/dlai/assets/dlai-logo.png",
+    "bytes": 44291
+  },
+  {
+    "file": "learnkarts.png",
+    "url": "https://edge-cdn.learnyst.com/learnyst-user-assets/school-assets/schools/157061/schoolLogo/1692262365168favicon%20learnkarts.png",
+    "bytes": 133803
+  },
+  {
+    "file": "pearson.svg",
+    "url": "https://www.pearson.com/content/dam/global/shared/brand/evolution/favicons/favicon-light.svg",
+    "bytes": 770
+  },
+  {
+    "file": "ualberta.png",
+    "url": "https://coursera-university-assets.s3.amazonaws.com/f6/4559ba784341fe8084f538436e3ee8/UA_Logo_Green_RGB-1-.png",
+    "bytes": 5629
+  },
+  {
+    "file": "meta.svg",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/meta.svg",
+    "bytes": 1324
+  },
+  {
+    "file": "react.svg",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/react.svg",
+    "bytes": 2926
+  },
+  {
+    "file": "angular.svg",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/angular.svg",
+    "bytes": 298
+  },
+  {
+    "file": "linux.svg",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/linux.svg",
+    "bytes": 5463
+  },
+  {
+    "file": "arduino.svg",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/arduino.svg",
+    "bytes": 964
+  },
+  {
+    "file": "raspberrypi.svg",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/raspberrypi.svg",
+    "bytes": 5936
+  },
+  {
+    "file": "openai.svg",
+    "url": "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/openai.svg",
+    "bytes": 1570
+  }
+]

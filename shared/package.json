@@ -1,0 +1,13 @@
+{
+  "name": "@hansana/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./schema": "./schema.js",
+    "./themes": "./themes.js"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  }
+}

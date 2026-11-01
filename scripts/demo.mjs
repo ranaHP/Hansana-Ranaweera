@@ -1,0 +1,15 @@
+import {fileURLToPath} from 'node:url';
+import {MongoMemoryServer} from 'mongodb-memory-server';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {randomBytes} from 'node:crypto';
+import {createServer} from 'vite';
+import {launch} from '../backend/index.js';
+import {hashPassword} from '../backend/security.js';
+console.log('Starting temporary MongoDB. First run downloads the MongoDB binary. Demo data resets when stopped.');
+const mongo=await MongoMemoryServer.create();const runtime=await launch(mongo.getUri());
+const email='admin@portfolio.local',password=randomBytes(18).toString('base64url')+'9a';
+await runtime.store.Admin.create({email,passwordHash:await hashPassword(password)});
+const vite=await createServer({configFile:fileURLToPath(new URL('../frontend/vite.config.js',import.meta.url))});await vite.listen();
+await mkdir(new URL('../.local/',import.meta.url),{recursive:true});await writeFile(new URL('../.local/demo-access.json',import.meta.url),JSON.stringify({notice:'Private temporary local demo credentials. Never share or deploy this file.',website:'http://127.0.0.1:5173/',admin:'http://127.0.0.1:5173/admin',email,password},null,2),{mode:0o600});
+console.log('React website: http://127.0.0.1:5173/\nAdmin: http://127.0.0.1:5173/admin\nPrivate sign-in: .local/demo-access.json');
+for(const signal of ['SIGINT','SIGTERM'])process.once(signal,async()=>{await vite.close();await runtime.close();await mongo.stop();process.exit();});

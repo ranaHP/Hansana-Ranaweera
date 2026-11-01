@@ -1,0 +1,5605 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "firstName": "Hansana",
+    "lastName": "Ranaweera",
+    "positioning": "Software engineer",
+    "location": "Riyadh, Saudi Arabia",
+    "role": "Full Stack Engineer",
+    "company": "DirectFN",
+    "industry": "Enterprise fintech",
+    "period": "May 2023–present",
+    "email": "ranaweerahansana@gmail.com",
+    "resume": "/assets/Hansana-Ranaweera-Resume.pdf",
+    "linkedin": "https://www.linkedin.com/in/hansanaranaweera",
+    "github": "https://github.com/ranaHP",
+    "originalPortrait": "/assets/hansana-portrait.webp",
+    "originalPortraitFallback": "/assets/hansana-portrait.png"
+  },
+  "seo": {
+    "title": "Hansana Ranaweera — Software Engineer & Maker, Riyadh",
+    "description": "Full Stack Engineer at DirectFN in Riyadh. Enterprise fintech, applied AI and creative engineering.",
+    "canonical": "",
+    "ogImage": ""
+  },
+  "appearance": {
+    "preset": "original",
+    "customColors": {
+      "page": "#f5f7f8",
+      "field": "#e5e9e7",
+      "paper": "#ffffff",
+      "ink": "#18263b",
+      "muted": "#586577",
+      "blue": "#345de3",
+      "line": "#d3dcd9",
+      "mint": "#9ed8bc",
+      "hero": "#eaf0ed",
+      "soft": "#e5ebe8"
+    },
+    "font": "system",
+    "radius": 20,
+    "sectionSpacing": 80,
+    "animations": true,
+    "seasonalDecor": true,
+    "backgroundImage": "",
+    "schedule": {
+      "enabled": false,
+      "timezone": "Asia/Riyadh",
+      "rules": [
+        {
+          "id": "halloween",
+          "theme": "halloween",
+          "start": "10-20",
+          "end": "11-02",
+          "enabled": true
+        },
+        {
+          "id": "christmas",
+          "theme": "christmas",
+          "start": "12-01",
+          "end": "12-31",
+          "enabled": true
+        }
+      ]
+    }
+  },
+  "hero": {
+    "portrait": "/assets/hansana-portrait-extended.webp",
+    "portraitFallback": "/assets/hansana-portrait-extended.png",
+    "portraitAlt": "Hansana Ranaweera smiling",
+    "minHeight": 660,
+    "padding": 40,
+    "nameSize": 76,
+    "imageScale": 1,
+    "imageX": 0,
+    "imageY": 0,
+    "imageTop": 28,
+    "imageBottom": -260,
+    "imageInsetX": -12,
+    "mobileNameSize": 48,
+    "mobileImageScale": 1,
+    "mobilePortraitRatio": 1.05,
+    "showIcons": true,
+    "iconOpacity": 0.3,
+    "showPlanning": true,
+    "backgroundImage": ""
+  },
+  "heroIcons": [
+    {
+      "id": "react",
+      "label": "React",
+      "image": "/assets/logos/react.svg",
+      "x": 7,
+      "y": 5,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "angular",
+      "label": "Angular",
+      "image": "/assets/logos/angular.svg",
+      "x": 27,
+      "y": 3,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "ai-chip",
+      "label": "AI",
+      "image": "/assets/logos/ai-chip.svg",
+      "x": 62,
+      "y": 3,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "openai",
+      "label": "ChatGPT",
+      "image": "/assets/logos/openai.svg",
+      "x": 79,
+      "y": 8,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "image": "/assets/logos/linux.svg",
+      "x": 3,
+      "y": 27,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "raspberrypi",
+      "label": "Raspberry Pi",
+      "image": "/assets/logos/raspberrypi.svg",
+      "x": 20,
+      "y": 21,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "local-llm",
+      "label": "Local LLM",
+      "image": "/assets/logos/local-llm.svg",
+      "x": 88,
+      "y": 28,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "printer-3d",
+      "label": "3D printing",
+      "image": "/assets/logos/printer-3d.svg",
+      "x": 5,
+      "y": 48,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "vr",
+      "label": "VR",
+      "image": "/assets/logos/vr.svg",
+      "x": 22,
+      "y": 42,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "server-ops",
+      "label": "Server ops",
+      "image": "/assets/logos/server-ops.svg",
+      "x": 84,
+      "y": 49,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "arduino",
+      "label": "Arduino",
+      "image": "/assets/logos/arduino.svg",
+      "x": 2,
+      "y": 71,
+      "visible": true,
+      "tilt": 0
+    },
+    {
+      "id": "drone",
+      "label": "Drones",
+      "image": "/assets/logos/drone.svg",
+      "x": 89,
+      "y": 73,
+      "visible": true,
+      "tilt": 0
+    }
+  ],
+  "navigation": [
+    {
+      "id": "about",
+      "label": "About",
+      "href": "#about",
+      "visible": true
+    },
+    {
+      "id": "work",
+      "label": "Work",
+      "href": "#work",
+      "visible": true
+    },
+    {
+      "id": "experience",
+      "label": "Experience",
+      "href": "#experience",
+      "visible": true
+    },
+    {
+      "id": "skills",
+      "label": "Skills",
+      "href": "#skills",
+      "visible": true
+    },
+    {
+      "id": "credentials",
+      "label": "Credentials",
+      "href": "#credentials",
+      "visible": true
+    },
+    {
+      "id": "insights",
+      "label": "Insights",
+      "href": "#insights",
+      "visible": true
+    },
+    {
+      "id": "more",
+      "label": "More",
+      "href": "#more",
+      "visible": true
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "href": "#contact",
+      "visible": true
+    }
+  ],
+  "sections": [
+    {
+      "id": "world",
+      "label": "World",
+      "visible": true
+    },
+    {
+      "id": "work",
+      "label": "Work",
+      "visible": true
+    },
+    {
+      "id": "skills",
+      "label": "Skills",
+      "visible": true
+    },
+    {
+      "id": "experience",
+      "label": "Experience",
+      "visible": true
+    },
+    {
+      "id": "credentials",
+      "label": "Credentials",
+      "visible": true
+    },
+    {
+      "id": "lab",
+      "label": "Lab",
+      "visible": true
+    },
+    {
+      "id": "method",
+      "label": "Method",
+      "visible": true
+    },
+    {
+      "id": "insights",
+      "label": "Insights",
+      "visible": true
+    },
+    {
+      "id": "more",
+      "label": "More",
+      "visible": true
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "visible": true
+    }
+  ],
+  "world": {
+    "enabled": true,
+    "defaultScene": 0,
+    "paused": false,
+    "background": "#e5e9e7",
+    "white": "#f4f6f3",
+    "stone": "#c7d3cc",
+    "slate": "#637a85",
+    "blue": "#345de3",
+    "mint": "#9ed8bc",
+    "followTheme": true
+  },
+  "worldScenes": [
+    {
+      "id": "build",
+      "title": "Build",
+      "kicker": "01 / BUILD — FROM PARTS TO A WORKING SYSTEM",
+      "description": "Interfaces, services, and data form a system. The interesting work is in how they connect."
+    },
+    {
+      "id": "operate",
+      "title": "Operate",
+      "kicker": "02 / OPERATE — KEEP THE SYSTEM DEPENDABLE",
+      "description": "Visibility, investigation and thoughtful operations keep systems useful."
+    },
+    {
+      "id": "explore",
+      "title": "Explore",
+      "kicker": "03 / EXPLORE — MAKE ROOM FOR THE NEXT IDEA",
+      "description": "Prototype, learn and connect ideas across software and the physical world."
+    }
+  ],
+  "data": {
+    "projects": [
+      {
+        "id": "financial",
+        "title": "Financial Trading Systems",
+        "category": "PRODUCTION / DIRECTFN",
+        "status": "Professional experience",
+        "summary": "Engineering and supporting enterprise financial applications and brokerage workflows.",
+        "stack": [
+          "Java / Dropwizard",
+          "Angular",
+          "Oracle / SQL",
+          "Production operations"
+        ],
+        "challenge": "Financial applications connect interfaces, services, integrations, reports and data workflows. Supporting that environment requires understanding both software behaviour and operational context.",
+        "role": "Full Stack Engineer at DirectFN Ltd., May 2023–present. The résumé records engineering, integrations, reports, deployments, production operations, incident diagnosis and automation tooling. Individual feature ownership and team scope: details to confirm.",
+        "approach": "Contributions span Java/Dropwizard services, Angular applications and Oracle/SQL workflows, alongside deployment and incident investigation. This is a generalized account of the résumé, with no employer implementation details disclosed.",
+        "decisions": "Discussion lens: a mitigation can restore service quickly, while a durable fix may need more investigation and validation. Specific decisions, alternatives, approval responsibilities and examples from my work: details to confirm.",
+        "outcome": "Ongoing professional experience at DirectFN. No performance, revenue, scale or uptime metrics are claimed.",
+        "learning": "A portfolio reflection: application behaviour and operational context belong in the same investigation. Specific retrospective examples: details to confirm.",
+        "flow": [
+          "Application interface",
+          "Service boundary",
+          "Data workflow"
+        ],
+        "flowNote": "Illustrative software layers only; this does not depict DirectFN architecture.",
+        "note": "Confidentiality: no client identifiers, application screens, employer source code, production data or infrastructure topology are included.",
+        "number": "01",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "mawthurula",
+        "title": "Mawthurula AR",
+        "category": "RECOGNIZED PROJECT / 2022",
+        "status": "NBQSA finalist",
+        "summary": "Web, mobile and augmented reality for pregnancy education. A 2022 National ICT Awards finalist project.",
+        "stack": [
+          "Augmented reality",
+          "Web / mobile",
+          "Educational interaction"
+        ],
+        "challenge": "Present pregnancy education through a web/mobile experience with augmented reality. The original target users, research findings and clinical review process: details to confirm.",
+        "role": "Résumé-listed project contribution. Exact responsibilities, team composition and ownership: details to confirm.",
+        "approach": "The résumé identifies web/mobile delivery and an augmented reality component for pregnancy education. The visualization below is an explanatory learning sequence, not a reconstruction of the implementation.",
+        "decisions": "Discussion lens: immersive interaction can make a subject approachable, but should not compete with clarity or accessibility. Specific implementation decisions and technology choices: details to confirm.",
+        "outcome": "Finalist at the 2022 National ICT Awards (NBQSA). No current deployment, clinical benefit or adoption figures are claimed.",
+        "learning": "Reflection prompt: how should visual engagement be balanced with clear, accessible information? Project-specific lessons: details to confirm.",
+        "flow": [
+          "Educational topic",
+          "AR interaction",
+          "Learning context"
+        ],
+        "flowNote": "Illustrative educational workflow; implementation details to confirm.",
+        "note": "Finalist, not winner. This portfolio does not provide medical guidance.",
+        "number": "02",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "cyboschool",
+        "title": "CyboSchool",
+        "category": "RECOGNIZED PROJECT / 2020",
+        "status": "Hackathon champion",
+        "summary": "An interactive education experiment using Three.js and machine learning, recognized at Escape the Loop.",
+        "stack": [
+          "Three.js",
+          "Machine learning",
+          "Interactive education"
+        ],
+        "challenge": "Explore education through interactive 3D and machine learning in a hackathon context. The exact problem brief and evaluation criteria: details to confirm.",
+        "role": "Résumé-listed project contribution. Team role, specific components and code ownership: details to confirm.",
+        "approach": "The résumé describes a Three.js and machine-learning-based interactive education experiment. Its conceptual sequence connects a learner action to a visual response.",
+        "decisions": "Discussion lens: a hackathon prototype needs a focused demonstration; a durable learning product also needs accessibility, evaluation and maintainability. Actual project trade-offs: details to confirm.",
+        "outcome": "Escape the Loop hackathon champion project (Mozilla), 2020. No current commercial deployment is claimed.",
+        "learning": "Reflection prompt: what would be needed to move from an engaging prototype to a validated learning tool? Project-specific lessons: details to confirm.",
+        "flow": [
+          "Learner action",
+          "3D interaction",
+          "Feedback"
+        ],
+        "flowNote": "Conceptual interaction sequence, not a verified architecture.",
+        "note": "Historical hackathon recognition, clearly separated from production employment.",
+        "number": "03",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "suwasewana",
+        "title": "Suwasewana",
+        "category": "RÉSUMÉ PROJECT / CIVIC HEALTH",
+        "status": "Résumé-listed project",
+        "summary": "A civic-health information portal connecting public-health officers and citizens.",
+        "stack": [
+          "Civic technology",
+          "Information portal"
+        ],
+        "challenge": "Support communication between public-health officers and citizens.",
+        "role": "Résumé-listed project; specific role, dates, ownership and deployment: details to confirm.",
+        "approach": "Information portal for public-health communication. Stack and architecture: details to confirm.",
+        "decisions": "Discussion lens: accessible communication and information accuracy. Project decisions: details to confirm.",
+        "outcome": "Included in the supplied résumé. Current status and outcomes: details to confirm.",
+        "learning": "Project-specific lessons: details to confirm.",
+        "flow": [
+          "Public-health officer",
+          "Information portal",
+          "Citizen"
+        ],
+        "flowNote": "Illustration of the stated communication context.",
+        "note": "No personal health data or screenshots are included.",
+        "number": "04",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "saftac",
+        "title": "SAF-TAC VR Training",
+        "category": "INTERNSHIP / SIMCENTRIC",
+        "status": "Internship context",
+        "summary": "Immersive simulation engineering during the SimCentric internship.",
+        "stack": [
+          "C++",
+          "Unreal Engine",
+          "VR simulation"
+        ],
+        "challenge": "High-fidelity simulation and immersive training, as described in the résumé.",
+        "role": "Software Engineer Intern, SimCentric Sri Lanka, Nov 2022–Apr 2023. Feature ownership: details to confirm.",
+        "approach": "C++ and Unreal Engine software engineering in an immersive training context.",
+        "decisions": "Discussion lens: visual fidelity, runtime responsiveness and maintainability. Specific project decisions: details to confirm.",
+        "outcome": "Completed internship experience. No product release ownership or performance measurements are claimed.",
+        "learning": "Specific engineering lessons and permitted examples: details to confirm.",
+        "flow": [
+          "Training scenario",
+          "Immersive simulation",
+          "Participant interaction"
+        ],
+        "flowNote": "General conceptual training sequence only.",
+        "note": "No proprietary training scenarios, assets or product internals are disclosed.",
+        "number": "05",
+        "image": "",
+        "link": ""
+      }
+    ],
+    "lab": [
+      {
+        "id": "ntp",
+        "title": "NTP Operations Control",
+        "category": "systems",
+        "status": "Prototype",
+        "summary": "An exploration of service controls, log navigation, safe release processes and repeatable operations.",
+        "stack": [
+          "Operations tooling",
+          "Automation",
+          "Service workflows"
+        ],
+        "challenge": "Bring operational context and repeatable support tasks into a more coherent workflow.",
+        "role": "Personal prototype listed in the résumé. Implemented scope and exact stack: details to confirm.",
+        "approach": "Explores remote service controls, log navigation and safe release processes. The diagram describes the idea without exposing any real environment.",
+        "decisions": "Design consideration: distinguish observation from actions that change state. Validation, access controls and auditability need evaluation before any operational use.",
+        "outcome": "Personal prototype. No employer adoption or production integration is claimed.",
+        "learning": "Validation results and implementation lessons: details to confirm.",
+        "flow": [
+          "Observe context",
+          "Review proposed action",
+          "Controlled execution"
+        ],
+        "flowNote": "Proposed workflow only; no live system is connected.",
+        "note": "No client, server or infrastructure details are present.",
+        "number": "01",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "workflow",
+        "title": "Client Workflow Automation",
+        "category": "systems",
+        "status": "Prototype · scope to confirm",
+        "summary": "Exploring structured requests and reviewable actions for repetitive support work.",
+        "stack": [
+          "Request parsing",
+          "Validation",
+          "Workflow design"
+        ],
+        "challenge": "Turn ambiguous requests into structured, reviewable tasks.",
+        "role": "Personal exploration named in the brief and previous site, absent from the supplied résumé. Implemented scope and ownership: details to confirm.",
+        "approach": "Proposed intake, validation and human review sequence. Exact implementation and tools are unconfirmed.",
+        "decisions": "Design consideration: require human review when information is ambiguous; avoid executing inferred changes automatically.",
+        "outcome": "Prototype exploration; completion and operational use are unconfirmed.",
+        "learning": "Evaluation results and project-specific lessons: details to confirm.",
+        "flow": [
+          "Request intake",
+          "Validate & review",
+          "Proposed action"
+        ],
+        "flowNote": "Proposed workflow, not evidence of a deployed system.",
+        "note": "Uses no employer requests, customer information or production data.",
+        "number": "02",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "tryon",
+        "title": "AI Virtual Try-On",
+        "category": "ai",
+        "status": "Experiment",
+        "summary": "Exploring garment visualization through computer vision and model inference.",
+        "stack": [
+          "Python",
+          "PyTorch",
+          "Computer vision"
+        ],
+        "challenge": "Explore visualizing garments on a person using computer vision.",
+        "role": "Personal experiment listed in the résumé.",
+        "approach": "Python, PyTorch and model-inference workflows. Specific model, dataset and implementation: details to confirm.",
+        "decisions": "Evaluation considerations include identity consistency, garment detail, consent and realistic output. No benchmark is claimed.",
+        "outcome": "Experiment. No public demo, commercial launch or accuracy claims.",
+        "learning": "Results, limitations and lessons from actual trials: details to confirm.",
+        "flow": [
+          "Person + garment",
+          "Model inference",
+          "Visual evaluation"
+        ],
+        "flowNote": "Conceptual experiment workflow.",
+        "note": "No generated image is presented as a real project result.",
+        "number": "03",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "hydro",
+        "title": "Smart Hydroponic Tower",
+        "category": "hardware",
+        "status": "Prototype · in progress",
+        "summary": "Vertical growing, environmental sensing and light / water control with an ESP32.",
+        "stack": [
+          "ESP32",
+          "Sensors",
+          "IoT",
+          "Physical prototyping"
+        ],
+        "challenge": "Explore a compact growing system with environmental sensing and automated light and water control.",
+        "role": "Personal hardware prototype listed in the résumé.",
+        "approach": "ESP32-based sensing and control for a vertical growing tower. Build stage, sensor selection and tested behaviours: details to confirm.",
+        "decisions": "Design consideration: test water delivery and failure states before extending automation. Actual test records and safeguards: details to confirm.",
+        "outcome": "Prototype in progress. No yield, reliability or commercial outcomes are claimed.",
+        "learning": "Hardware trial results and maintenance lessons: details to confirm.",
+        "flow": [
+          "Sense environment",
+          "Control logic",
+          "Light / water"
+        ],
+        "flowNote": "Illustrative feedback loop, not a verified wiring diagram.",
+        "note": "This is a prototype description, not installation guidance.",
+        "number": "04",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "opslens",
+        "title": "OpsLens",
+        "category": "ai",
+        "status": "Concept",
+        "summary": "An idea for an AI assistant that helps organize incident context.",
+        "stack": [
+          "Applied AI concept",
+          "Incident context"
+        ],
+        "challenge": "Could an assistant help organize evidence without making unsupported diagnostic claims?",
+        "role": "Future concept requested in the brief. No implementation claimed.",
+        "approach": "Proposed retrieval and evidence organization with human review.",
+        "decisions": "Separate cited evidence from generated hypotheses; keep people responsible for decisions.",
+        "outcome": "Concept only. Not built or deployed.",
+        "learning": "To be evaluated if developed.",
+        "flow": [
+          "Incident evidence",
+          "Organize context",
+          "Human assessment"
+        ],
+        "flowNote": "Proposed concept only.",
+        "note": "No operational integration or access exists in this portfolio.",
+        "number": "05",
+        "image": "",
+        "link": ""
+      },
+      {
+        "id": "tradetrace",
+        "title": "TradeTrace",
+        "category": "systems",
+        "status": "Concept",
+        "summary": "An idea for exploring transaction lifecycles using synthetic events.",
+        "stack": [
+          "Synthetic data",
+          "Learning tool concept"
+        ],
+        "challenge": "Could a synthetic workflow help explain service handoffs and transaction state?",
+        "role": "Future concept requested in the brief. No implementation claimed.",
+        "approach": "Proposed simulated events and a visual lifecycle, with synthetic data only.",
+        "decisions": "Keep simulation clearly distinguishable from real trading systems and data.",
+        "outcome": "Concept only. Not built or deployed.",
+        "learning": "To be evaluated if developed.",
+        "flow": [
+          "Synthetic event",
+          "Simulated lifecycle",
+          "Learning view"
+        ],
+        "flowNote": "Proposed educational concept only.",
+        "note": "No actual transactions, market feeds or financial recommendations.",
+        "number": "06",
+        "image": "",
+        "link": ""
+      }
+    ],
+    "skills": [
+      {
+        "id": "skill-0",
+        "title": "Backend & full-stack",
+        "level": "PRODUCTION EXPERIENCE",
+        "summary": "Java · Dropwizard · Angular · Oracle / SQL",
+        "detail": "DirectFN résumé evidence: services, frontend applications, data workflows, integrations and reports. React / TypeScript / Redux / GraphQL are also recorded in SoftVessel training. Spring Boot, Node.js, Express and Flutter appear in the broader résumé toolkit; depth to confirm."
+      },
+      {
+        "id": "skill-1",
+        "title": "Operations & reliability",
+        "level": "PRODUCTION EXPERIENCE",
+        "summary": "Incident diagnosis · Deployments · Automation",
+        "detail": "Production operations and incident diagnosis are recorded at DirectFN. Linux/RHEL, PL/SQL, ActiveMQ, RabbitMQ and SSH are listed in the toolkit. System scale, on-call responsibilities and SRE ownership are not quantified."
+      },
+      {
+        "id": "skill-2",
+        "title": "DevOps & delivery",
+        "level": "TOOLKIT / DEPTH TO CONFIRM",
+        "summary": "Docker · Jenkins · GitHub Actions · Git",
+        "detail": "These tools are listed in the résumé. The depth of CI/CD implementation, platform ownership and infrastructure responsibility needs confirmation; no dedicated SRE or DevOps employment title is claimed."
+      },
+      {
+        "id": "skill-3",
+        "title": "Applied AI",
+        "level": "EXPERIMENTAL / LEARNING",
+        "summary": "Python · PyTorch · Computer vision · Scikit-learn",
+        "detail": "AI Virtual Try-On is a personal experiment. PyTorch experiments, Scikit-learn and Pandas appear in the résumé. Generative AI coursework is supported by supplied completion screenshots. No production AI deployment is claimed."
+      },
+      {
+        "id": "skill-4",
+        "title": "Immersive & physical systems",
+        "level": "INTERNSHIP / TEACHING / PROTOTYPES",
+        "summary": "C++ · Unreal Engine · Three.js · ESP32 · Arduino",
+        "detail": "C++ / Unreal Engine through SimCentric internship; Three.js through CyboSchool; robotics through teaching; ESP32 and sensors through the hydroponic prototype. Unity is in the broader toolkit."
+      }
+    ],
+    "experience": [
+      {
+        "id": "experience-0",
+        "period": "MAY 2023 — PRESENT",
+        "title": "Full Stack Engineer",
+        "company": "DirectFN Ltd.",
+        "description": "Financial applications and brokerage workflows. Java/Dropwizard, Angular, Oracle/SQL, integrations, reports, deployments, production operations, incident diagnosis and automation tooling."
+      },
+      {
+        "id": "experience-1",
+        "period": "NOV 2022 — APR 2023",
+        "title": "Software Engineer Intern",
+        "company": "SimCentric Sri Lanka",
+        "description": "C++ and Unreal Engine engineering in high-fidelity simulation and immersive training."
+      },
+      {
+        "id": "experience-2",
+        "period": "2021",
+        "title": "React Industrial Training",
+        "company": "SoftVessel",
+        "description": "React, TypeScript, Redux, UX/SCSS, GraphQL and collaborative frontend development practices."
+      },
+      {
+        "id": "experience-3",
+        "period": "2019 — 2022",
+        "title": "Kids’ Robotics Lecturer",
+        "company": "Sri Lanka Institute of Robotics",
+        "description": "Teaching robotics and practical computing to young learners."
+      },
+      {
+        "id": "experience-4",
+        "period": "2019 — 2020",
+        "title": "JavaScript Developer Intern",
+        "company": "Sri Lanka Institute of Robotics",
+        "description": "Software development and web interface work in a robotics-focused environment."
+      }
+    ],
+    "education": [
+      {
+        "id": "bsc",
+        "title": "BSc in Computer Science",
+        "institution": "University of Colombo School of Computing",
+        "period": "2020–2023",
+        "description": ""
+      },
+      {
+        "id": "java",
+        "title": "CMJD Java Development",
+        "institution": "IJSE Institute of Software Engineering",
+        "period": "2019",
+        "description": ""
+      }
+    ],
+    "certificates": [
+      {
+        "id": "course-0",
+        "title": "Advanced React",
+        "issuer": "Meta",
+        "group": "Software",
+        "logo": "/assets/logos/meta.svg",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-a.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      },
+      {
+        "id": "course-1",
+        "title": "Prompt Engineering for Generative AI: Build Better AI Prompts",
+        "issuer": "IBM",
+        "group": "Generative AI",
+        "logo": "/assets/logos/ibm.svg",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-b.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      },
+      {
+        "id": "course-2",
+        "title": "Generative AI Essentials: From Fundamentals to Real-World Applications",
+        "issuer": "IBM",
+        "group": "Generative AI",
+        "logo": "/assets/logos/ibm.svg",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-b.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      },
+      {
+        "id": "course-3",
+        "title": "Introduction to Generative AI for Software Development",
+        "issuer": "DeepLearning.AI",
+        "group": "Generative AI",
+        "logo": "/assets/logos/deeplearning-ai.png",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-b.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      },
+      {
+        "id": "course-4",
+        "title": "Docker Fundamentals",
+        "issuer": "LearnKartS",
+        "group": "Systems",
+        "logo": "/assets/logos/learnkarts.png",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-b.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      },
+      {
+        "id": "course-5",
+        "title": "Getting Started with Docker",
+        "issuer": "LearnKartS",
+        "group": "Systems",
+        "logo": "/assets/logos/learnkarts.png",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-b.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      },
+      {
+        "id": "course-6",
+        "title": "Linux Networking: Setup and Networking 101",
+        "issuer": "Pearson",
+        "group": "Systems",
+        "logo": "/assets/logos/pearson.svg",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-b.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      },
+      {
+        "id": "course-7",
+        "title": "Introduction to Software Product Management",
+        "issuer": "University of Alberta / Coursera",
+        "group": "Product",
+        "logo": "/assets/logos/ualberta.png",
+        "evidenceImage": "/assets/certificates/certificate-screenshot-a.png",
+        "year": "",
+        "evidenceLabel": "Completed coursework · screenshot available",
+        "verificationUrl": "",
+        "description": "Supplied course-completion screenshot. This is a completion record, not an individual certificate PDF."
+      }
+    ],
+    "additionalCourses": [
+      {
+        "id": "additional-0",
+        "title": "Programming for Everybody (Getting Started with Python)",
+        "issuer": "Coursera",
+        "year": "2021"
+      },
+      {
+        "id": "additional-1",
+        "title": "SQL",
+        "issuer": "SoloLearn",
+        "year": "2021"
+      },
+      {
+        "id": "additional-2",
+        "title": "React & Redux",
+        "issuer": "SoloLearn",
+        "year": "2022"
+      },
+      {
+        "id": "additional-3",
+        "title": "Responsive Web Design",
+        "issuer": "SoloLearn",
+        "year": "2022"
+      }
+    ],
+    "methods": [
+      {
+        "id": "method-0",
+        "title": "Observe",
+        "question": "What is actually happening?",
+        "description": "Describe the symptom, the affected workflow, and the evidence available before proposing an explanation."
+      },
+      {
+        "id": "method-1",
+        "title": "Investigate",
+        "question": "What would disprove the hypothesis?",
+        "description": "Connect observations, establish a timeline, and distinguish what is known from what is assumed."
+      },
+      {
+        "id": "method-2",
+        "title": "Build",
+        "question": "What is the smallest useful change?",
+        "description": "Choose a focused approach with explicit boundaries and clear handling of failure."
+      },
+      {
+        "id": "method-3",
+        "title": "Validate",
+        "question": "How will we know it works?",
+        "description": "Check expected behaviour, edge cases and the recovery path. Evaluate against the original problem."
+      },
+      {
+        "id": "method-4",
+        "title": "Operate",
+        "question": "Can someone understand and support it?",
+        "description": "Think about visibility, maintainability, documentation and the people responsible for the system."
+      },
+      {
+        "id": "method-5",
+        "title": "Improve",
+        "question": "What should become easier next time?",
+        "description": "Use feedback to simplify the next iteration and make useful learning repeatable."
+      }
+    ],
+    "notes": [
+      {
+        "id": "evidence",
+        "title": "Before the fix, find the signal.",
+        "type": "READING NOTE / DRAFT",
+        "summary": "A short framework for evidence-led incident investigation.",
+        "sections": [
+          {
+            "id": "paragraph-0",
+            "heading": "Establish a timeline",
+            "text": "Record the symptom and the relevant changes. A timeline is more useful than a collection of unrelated observations."
+          },
+          {
+            "id": "paragraph-1",
+            "heading": "Separate evidence from interpretation",
+            "text": "Write down what you know and what you are inferring. Ask which observation could disprove your current explanation."
+          },
+          {
+            "id": "paragraph-2",
+            "heading": "Check the recovery",
+            "text": "A disappearing error is one signal. Verify the original workflow and document what remains uncertain."
+          }
+        ],
+        "note": "New editorial draft prepared for this portfolio. Not a previously published article or an account of a specific employer incident."
+      },
+      {
+        "id": "teaching",
+        "title": "Explain it by building it.",
+        "type": "TEACHING NOTE / DRAFT",
+        "summary": "Making a technical idea tangible through a small feedback loop.",
+        "sections": [
+          {
+            "id": "paragraph-0",
+            "heading": "Start with a visible behaviour",
+            "text": "Use a simple input and output, such as a sensor changing an indicator. Make the causal relationship observable."
+          },
+          {
+            "id": "paragraph-1",
+            "heading": "Change one thing",
+            "text": "Let the learner predict the effect of a small change, then compare the result with that prediction."
+          },
+          {
+            "id": "paragraph-2",
+            "heading": "Name the underlying idea",
+            "text": "Connect the observation to the concept after the learner has something concrete to reason about."
+          }
+        ],
+        "note": "New educational draft prepared for this portfolio, informed by the résumé’s robotics teaching background. Not a claimed published lesson."
+      },
+      {
+        "id": "tower",
+        "title": "Inside the connected grow tower.",
+        "type": "VIDEO / PLANNED",
+        "summary": "A proposed walkthrough of sensing, water control and physical prototyping.",
+        "sections": [
+          {
+            "id": "paragraph-0",
+            "heading": "The physical loop",
+            "text": "Proposed outline: introduce the tower, water circulation and maintainability."
+          },
+          {
+            "id": "paragraph-1",
+            "heading": "The control loop",
+            "text": "Proposed outline: sensor reads, simple thresholds and light/water control."
+          },
+          {
+            "id": "paragraph-2",
+            "heading": "The learning loop",
+            "text": "Proposed outline: show what was tested, what failed and what needs another iteration."
+          }
+        ],
+        "note": "Planned video outline. No recorded video or publication date is available."
+      }
+    ],
+    "recognition": [
+      {
+        "id": "award-0",
+        "year": "2022",
+        "text": "National ICT Awards (NBQSA) finalist"
+      },
+      {
+        "id": "award-1",
+        "year": "2020",
+        "text": "Escape the Loop hackathon champion (Mozilla)"
+      },
+      {
+        "id": "award-2",
+        "year": "2018",
+        "text": "Matara District Rank 1 · G.C.E. Advanced Level"
+      },
+      {
+        "id": "award-3",
+        "year": "2015",
+        "text": "SLIIT CODEFEST 1st Runners-Up; represented Sri Lanka at APICTA"
+      },
+      {
+        "id": "award-4",
+        "year": "2014",
+        "text": "Sri Lanka’s Youngest Computer Scientist of the Year; Best Project of the Year"
+      }
+    ]
+  },
+  "copy": {
+    "text_0001": "Skip to content",
+    "text_0002": "h",
+    "text_0003": "r",
+    "text_0004": ".",
+    "text_0005": "⌕ ",
+    "text_0006": "Find",
+    "text_0007": "Quick",
+    "text_0008": "World",
+    "text_0009": "CV ↓",
+    "text_0010": "☰",
+    "text_0011": ".",
+    "text_0012": "A little curiosity.",
+    "text_0013": "A world of possibility.",
+    "text_0014": "I build dependable software for complex systems, and explore what technology can become.",
+    "text_0015": "Production systems · Full-stack · Applied AI & DevOps",
+    "text_0016": "Explore my work ",
+    "text_0017": "↗",
+    "text_0018": "Résumé ",
+    "text_0019": "↓",
+    "text_0020": "Email ↗",
+    "text_0021": "LinkedIn ↗",
+    "text_0022": "GitHub ↗",
+    "text_0023": "01 — Selected work",
+    "text_0024": "02 — Capabilities",
+    "text_0025": "03 — Experience",
+    "text_0026": "04 — Credentials",
+    "text_0027": "09 — Contact",
+    "text_0028": "FINANCIAL SYSTEMS / PLANNING STUDY",
+    "text_0029": "INTERFACE",
+    "text_0030": "SERVICE",
+    "text_0031": "DATA",
+    "text_0032": "TRACE / VALIDATE / RECORD",
+    "text_0033": "PLAN / FINTECH SYSTEMS",
+    "text_0034": "REQUEST",
+    "text_0035": "VALIDATE",
+    "text_0036": "PROCESS",
+    "text_0037": "RECORD",
+    "text_0038": "CONCEPT SKETCH / SYNTHETIC WORKFLOW",
+    "text_0039": "CLOUD / CONNECTED SYSTEMS",
+    "text_0040": "DATA / STRUCTURE + CLARITY",
+    "text_0041": "AI / CONNECTED THINKING",
+    "text_0042": "VR / SPATIAL IDEAS",
+    "text_0043": "3D / NEW PERSPECTIVES",
+    "text_0044": " DEVOPS / DEMO LOG",
+    "text_0045": "01",
+    "text_0046": " build → test",
+    "text_0047": "02",
+    "text_0048": " review → release",
+    "text_0049": "03",
+    "text_0050": " observe → learn",
+    "text_0051": "THE HUMAN SIDE OF ENGINEERING",
+    "text_0052": "01 / THE MAKER · SUPPLIED PORTRAIT",
+    "text_0053": "SOFTWARE / AI / SYSTEMS / MAKING",
+    "text_0054": "PRODUCTION SYSTEMS / FULL-STACK / APPLIED AI & DEVOPS",
+    "text_0055": "Here to hire? Get the 60-second brief ",
+    "text_0056": "↗",
+    "text_0057": "⌘",
+    "text_0058": "PRODUCTION EXPERIENCE",
+    "text_0059": "{{profile.company}} · {{profile.industry}}",
+    "text_0060": "↗",
+    "text_0061": "RECOGNIZED INNOVATION",
+    "text_0062": "NBQSA finalist · 2022",
+    "text_0063": "◇",
+    "text_0064": "COMPUTER SCIENCE",
+    "text_0065": "BSc · University of Colombo",
+    "text_0066": "A SMALL WORLD. A BIG WAY OF THINKING.",
+    "text_0067": "Everything is ",
+    "text_0068": "connected.",
+    "text_0069": "Building software. Keeping it dependable. Exploring the next idea.",
+    "text_0070": "Three perspectives, one engineering mind.",
+    "text_0071": "THE SYSTEMS GARDEN / INTERACTIVE 3D STUDY",
+    "text_0072": "Pause motion Ⅱ",
+    "text_0073": "01 / BUILD — FROM PARTS TO A WORKING SYSTEM",
+    "text_0074": "01",
+    "text_0075": " Build",
+    "text_0076": "02",
+    "text_0077": " Operate",
+    "text_0078": "03",
+    "text_0079": " Explore",
+    "text_0080": "Interfaces, services, and data form a system. The interesting work is in how they connect.",
+    "text_0081": "Conceptual illustration · no real infrastructure depicted",
+    "text_0082": "01 / SELECTED WORK",
+    "text_0083": "Real problems.",
+    "text_0084": "Thoughtful engineering.",
+    "text_0085": "Production contributions and recognized projects. Open a case study for the context, role, approach, tools, and evidence.",
+    "text_0086": "ALSO IN THE RÉSUMÉ",
+    "text_0087": "Suwasewana · Civic health ↗",
+    "text_0088": "SAF-TAC · Immersive training ↗",
+    "text_0089": "02 / CAPABILITIES",
+    "text_0090": "A practical toolkit.",
+    "text_0091": "A curious mindset.",
+    "text_0092": "Production experience, training, and experiments are different kinds of evidence. Here’s where each part of my toolkit comes from.",
+    "text_0093": "03 / EXPERIENCE",
+    "text_0094": "One thread.",
+    "text_0095": "Many ways to build.",
+    "text_0096": "From teaching robotics and immersive simulation to the discipline of enterprise financial software.",
+    "text_0097": "04 / CONTINUOUS LEARNING",
+    "text_0098": "Always a student.",
+    "text_0099": "Always moving forward.",
+    "text_0100": "Completed coursework across software, AI, and systems. Explore the issuer, course details, and original supplied completion screenshots.",
+    "text_0101": "All coursework",
+    "text_0102": "Software & product",
+    "text_0103": "Generative AI",
+    "text_0104": "Systems",
+    "text_0105": "View original course-completion images ",
+    "text_0106": "2 supplied screenshots +",
+    "text_0107": "These records show all eight courses as complete. Open either image for the original, uncropped view.",
+    "text_0108": "01 / REACT & PRODUCT MANAGEMENT ↗",
+    "text_0109": "02 / AI, DOCKER & NETWORKING ↗",
+    "text_0110": "Four additional résumé-listed courses ",
+    "text_0111": "+",
+    "text_0112": "05 / THE INDEPENDENT LAB",
+    "text_0113": "Leave room",
+    "text_0114": "for “what if?”",
+    "text_0115": "Personal prototypes, experiments, and future concepts. A place to learn by making, with status and limits stated plainly.",
+    "text_0116": "Everything",
+    "text_0117": "Systems",
+    "text_0118": "AI",
+    "text_0119": "Hardware",
+    "text_0120": "06 / HOW I THINK",
+    "text_0121": "Curiosity starts it.",
+    "text_0122": "Discipline carries it.",
+    "text_0123": "An engineering thinking framework: move from an observation to a useful, supportable system.",
+    "text_0124": "07 / NOTES & TEACHING",
+    "text_0125": "Build understanding.",
+    "text_0126": "Pass it on.",
+    "text_0127": "Robotics teaching and practical engineering share a simple joy: making a difficult idea feel approachable.",
+    "text_0128": "08 / BEYOND THE DAY JOB",
+    "text_0129": "Curiosity didn’t",
+    "text_0130": "start yesterday.",
+    "text_0131": "Historical recognition, teaching, and the human side of the work.",
+    "text_0132": "THE MAKER / SUPPLIED PORTRAIT",
+    "text_0133": "Teaching & service",
+    "text_0134": "Kids’ robotics teaching, 2019–2022. University volunteer mathematics outreach for rural schools in Polonnaruwa and Badulla.",
+    "text_0135": "References",
+    "text_0136": "Professional and academic references available upon request.",
+    "text_0137": " THE NEXT GOOD CONVERSATION",
+    "text_0138": "Great things start",
+    "text_0139": "with a hello.",
+    "text_0140": "Interested in senior software engineering, applied AI, DevOps / reliability, and innovative product opportunities in Riyadh, across Saudi Arabia, or remote.",
+    "text_0141": "{{profile.email}} ",
+    "text_0142": "↗",
+    "text_0143": "Download résumé ↓",
+    "text_0144": "LinkedIn ↗",
+    "text_0145": "GitHub ↗",
+    "text_0146": "Notice period and start date to be discussed.",
+    "text_0147": "© 2026 {{profile.firstName}} {{profile.lastName}}",
+    "text_0148": "BUILT WITH CARE. POWERED BY CURIOSITY.",
+    "text_0149": "Back to top ↑",
+    "text_0150": "⌕ ",
+    "text_0151": "Find anything",
+    "text_0152": "Ctrl K",
+    "text_0153": "Recruiter brief ↗"
+  },
+  "copyMeta": {
+    "text_0001": {
+      "group": "General",
+      "label": "Skip to content"
+    },
+    "text_0002": {
+      "group": "General",
+      "label": "h"
+    },
+    "text_0003": {
+      "group": "General",
+      "label": "r"
+    },
+    "text_0004": {
+      "group": "General",
+      "label": "."
+    },
+    "text_0005": {
+      "group": "General",
+      "label": "⌕"
+    },
+    "text_0006": {
+      "group": "General",
+      "label": "Find"
+    },
+    "text_0007": {
+      "group": "General",
+      "label": "Quick"
+    },
+    "text_0008": {
+      "group": "General",
+      "label": "World"
+    },
+    "text_0009": {
+      "group": "General",
+      "label": "CV ↓"
+    },
+    "text_0010": {
+      "group": "General",
+      "label": "☰"
+    },
+    "text_0011": {
+      "group": "about",
+      "label": "."
+    },
+    "text_0012": {
+      "group": "about",
+      "label": "A little curiosity."
+    },
+    "text_0013": {
+      "group": "about",
+      "label": "A world of possibility."
+    },
+    "text_0014": {
+      "group": "about",
+      "label": "I build dependable software for complex systems, and explore what technology can become."
+    },
+    "text_0015": {
+      "group": "about",
+      "label": "Production systems · Full-stack · Applied AI & DevOps"
+    },
+    "text_0016": {
+      "group": "about",
+      "label": "Explore my work"
+    },
+    "text_0017": {
+      "group": "about",
+      "label": "↗"
+    },
+    "text_0018": {
+      "group": "about",
+      "label": "Résumé"
+    },
+    "text_0019": {
+      "group": "about",
+      "label": "↓"
+    },
+    "text_0020": {
+      "group": "about",
+      "label": "Email ↗"
+    },
+    "text_0021": {
+      "group": "about",
+      "label": "LinkedIn ↗"
+    },
+    "text_0022": {
+      "group": "about",
+      "label": "GitHub ↗"
+    },
+    "text_0023": {
+      "group": "about",
+      "label": "01 — Selected work"
+    },
+    "text_0024": {
+      "group": "about",
+      "label": "02 — Capabilities"
+    },
+    "text_0025": {
+      "group": "about",
+      "label": "03 — Experience"
+    },
+    "text_0026": {
+      "group": "about",
+      "label": "04 — Credentials"
+    },
+    "text_0027": {
+      "group": "about",
+      "label": "09 — Contact"
+    },
+    "text_0028": {
+      "group": "about",
+      "label": "FINANCIAL SYSTEMS / PLANNING STUDY"
+    },
+    "text_0029": {
+      "group": "about",
+      "label": "INTERFACE"
+    },
+    "text_0030": {
+      "group": "about",
+      "label": "SERVICE"
+    },
+    "text_0031": {
+      "group": "about",
+      "label": "DATA"
+    },
+    "text_0032": {
+      "group": "about",
+      "label": "TRACE / VALIDATE / RECORD"
+    },
+    "text_0033": {
+      "group": "about",
+      "label": "PLAN / FINTECH SYSTEMS"
+    },
+    "text_0034": {
+      "group": "about",
+      "label": "REQUEST"
+    },
+    "text_0035": {
+      "group": "about",
+      "label": "VALIDATE"
+    },
+    "text_0036": {
+      "group": "about",
+      "label": "PROCESS"
+    },
+    "text_0037": {
+      "group": "about",
+      "label": "RECORD"
+    },
+    "text_0038": {
+      "group": "about",
+      "label": "CONCEPT SKETCH / SYNTHETIC WORKFLOW"
+    },
+    "text_0039": {
+      "group": "about",
+      "label": "CLOUD / CONNECTED SYSTEMS"
+    },
+    "text_0040": {
+      "group": "about",
+      "label": "DATA / STRUCTURE + CLARITY"
+    },
+    "text_0041": {
+      "group": "about",
+      "label": "AI / CONNECTED THINKING"
+    },
+    "text_0042": {
+      "group": "about",
+      "label": "VR / SPATIAL IDEAS"
+    },
+    "text_0043": {
+      "group": "about",
+      "label": "3D / NEW PERSPECTIVES"
+    },
+    "text_0044": {
+      "group": "about",
+      "label": "DEVOPS / DEMO LOG"
+    },
+    "text_0045": {
+      "group": "about",
+      "label": "01"
+    },
+    "text_0046": {
+      "group": "about",
+      "label": "build → test"
+    },
+    "text_0047": {
+      "group": "about",
+      "label": "02"
+    },
+    "text_0048": {
+      "group": "about",
+      "label": "review → release"
+    },
+    "text_0049": {
+      "group": "about",
+      "label": "03"
+    },
+    "text_0050": {
+      "group": "about",
+      "label": "observe → learn"
+    },
+    "text_0051": {
+      "group": "about",
+      "label": "THE HUMAN SIDE OF ENGINEERING"
+    },
+    "text_0052": {
+      "group": "about",
+      "label": "01 / THE MAKER · SUPPLIED PORTRAIT"
+    },
+    "text_0053": {
+      "group": "about",
+      "label": "SOFTWARE / AI / SYSTEMS / MAKING"
+    },
+    "text_0054": {
+      "group": "about",
+      "label": "PRODUCTION SYSTEMS / FULL-STACK / APPLIED AI & DEVOPS"
+    },
+    "text_0055": {
+      "group": "about",
+      "label": "Here to hire? Get the 60-second brief"
+    },
+    "text_0056": {
+      "group": "about",
+      "label": "↗"
+    },
+    "text_0057": {
+      "group": "General",
+      "label": "⌘"
+    },
+    "text_0058": {
+      "group": "General",
+      "label": "PRODUCTION EXPERIENCE"
+    },
+    "text_0059": {
+      "group": "General",
+      "label": "DirectFN · Enterprise fintech"
+    },
+    "text_0060": {
+      "group": "General",
+      "label": "↗"
+    },
+    "text_0061": {
+      "group": "General",
+      "label": "RECOGNIZED INNOVATION"
+    },
+    "text_0062": {
+      "group": "General",
+      "label": "NBQSA finalist · 2022"
+    },
+    "text_0063": {
+      "group": "General",
+      "label": "◇"
+    },
+    "text_0064": {
+      "group": "General",
+      "label": "COMPUTER SCIENCE"
+    },
+    "text_0065": {
+      "group": "General",
+      "label": "BSc · University of Colombo"
+    },
+    "text_0066": {
+      "group": "world",
+      "label": "A SMALL WORLD. A BIG WAY OF THINKING."
+    },
+    "text_0067": {
+      "group": "world",
+      "label": "Everything is"
+    },
+    "text_0068": {
+      "group": "world",
+      "label": "connected."
+    },
+    "text_0069": {
+      "group": "world",
+      "label": "Building software. Keeping it dependable. Exploring the next idea."
+    },
+    "text_0070": {
+      "group": "world",
+      "label": "Three perspectives, one engineering mind."
+    },
+    "text_0071": {
+      "group": "world",
+      "label": "THE SYSTEMS GARDEN / INTERACTIVE 3D STUDY"
+    },
+    "text_0072": {
+      "group": "world",
+      "label": "Pause motion Ⅱ"
+    },
+    "text_0073": {
+      "group": "world",
+      "label": "01 / BUILD — FROM PARTS TO A WORKING SYSTEM"
+    },
+    "text_0074": {
+      "group": "world",
+      "label": "01"
+    },
+    "text_0075": {
+      "group": "world",
+      "label": "Build"
+    },
+    "text_0076": {
+      "group": "world",
+      "label": "02"
+    },
+    "text_0077": {
+      "group": "world",
+      "label": "Operate"
+    },
+    "text_0078": {
+      "group": "world",
+      "label": "03"
+    },
+    "text_0079": {
+      "group": "world",
+      "label": "Explore"
+    },
+    "text_0080": {
+      "group": "world",
+      "label": "Interfaces, services, and data form a system. The interesting work is in how they connect."
+    },
+    "text_0081": {
+      "group": "world",
+      "label": "Conceptual illustration · no real infrastructure depicted"
+    },
+    "text_0082": {
+      "group": "work",
+      "label": "01 / SELECTED WORK"
+    },
+    "text_0083": {
+      "group": "work",
+      "label": "Real problems."
+    },
+    "text_0084": {
+      "group": "work",
+      "label": "Thoughtful engineering."
+    },
+    "text_0085": {
+      "group": "work",
+      "label": "Production contributions and recognized projects. Open a case study for the context, role, approach,"
+    },
+    "text_0086": {
+      "group": "work",
+      "label": "ALSO IN THE RÉSUMÉ"
+    },
+    "text_0087": {
+      "group": "work",
+      "label": "Suwasewana · Civic health ↗"
+    },
+    "text_0088": {
+      "group": "work",
+      "label": "SAF-TAC · Immersive training ↗"
+    },
+    "text_0089": {
+      "group": "skills",
+      "label": "02 / CAPABILITIES"
+    },
+    "text_0090": {
+      "group": "skills",
+      "label": "A practical toolkit."
+    },
+    "text_0091": {
+      "group": "skills",
+      "label": "A curious mindset."
+    },
+    "text_0092": {
+      "group": "skills",
+      "label": "Production experience, training, and experiments are different kinds of evidence. Here’s where each "
+    },
+    "text_0093": {
+      "group": "experience",
+      "label": "03 / EXPERIENCE"
+    },
+    "text_0094": {
+      "group": "experience",
+      "label": "One thread."
+    },
+    "text_0095": {
+      "group": "experience",
+      "label": "Many ways to build."
+    },
+    "text_0096": {
+      "group": "experience",
+      "label": "From teaching robotics and immersive simulation to the discipline of enterprise financial software."
+    },
+    "text_0097": {
+      "group": "credentials",
+      "label": "04 / CONTINUOUS LEARNING"
+    },
+    "text_0098": {
+      "group": "credentials",
+      "label": "Always a student."
+    },
+    "text_0099": {
+      "group": "credentials",
+      "label": "Always moving forward."
+    },
+    "text_0100": {
+      "group": "credentials",
+      "label": "Completed coursework across software, AI, and systems. Explore the issuer, course details, and origi"
+    },
+    "text_0101": {
+      "group": "credentials",
+      "label": "All coursework"
+    },
+    "text_0102": {
+      "group": "credentials",
+      "label": "Software & product"
+    },
+    "text_0103": {
+      "group": "credentials",
+      "label": "Generative AI"
+    },
+    "text_0104": {
+      "group": "credentials",
+      "label": "Systems"
+    },
+    "text_0105": {
+      "group": "credentials",
+      "label": "View original course-completion images"
+    },
+    "text_0106": {
+      "group": "credentials",
+      "label": "2 supplied screenshots +"
+    },
+    "text_0107": {
+      "group": "credentials",
+      "label": "These records show all eight courses as complete. Open either image for the original, uncropped view"
+    },
+    "text_0108": {
+      "group": "credentials",
+      "label": "01 / REACT & PRODUCT MANAGEMENT ↗"
+    },
+    "text_0109": {
+      "group": "credentials",
+      "label": "02 / AI, DOCKER & NETWORKING ↗"
+    },
+    "text_0110": {
+      "group": "credentials",
+      "label": "Four additional résumé-listed courses"
+    },
+    "text_0111": {
+      "group": "credentials",
+      "label": "+"
+    },
+    "text_0112": {
+      "group": "lab",
+      "label": "05 / THE INDEPENDENT LAB"
+    },
+    "text_0113": {
+      "group": "lab",
+      "label": "Leave room"
+    },
+    "text_0114": {
+      "group": "lab",
+      "label": "for “what if?”"
+    },
+    "text_0115": {
+      "group": "lab",
+      "label": "Personal prototypes, experiments, and future concepts. A place to learn by making, with status and l"
+    },
+    "text_0116": {
+      "group": "lab",
+      "label": "Everything"
+    },
+    "text_0117": {
+      "group": "lab",
+      "label": "Systems"
+    },
+    "text_0118": {
+      "group": "lab",
+      "label": "AI"
+    },
+    "text_0119": {
+      "group": "lab",
+      "label": "Hardware"
+    },
+    "text_0120": {
+      "group": "method",
+      "label": "06 / HOW I THINK"
+    },
+    "text_0121": {
+      "group": "method",
+      "label": "Curiosity starts it."
+    },
+    "text_0122": {
+      "group": "method",
+      "label": "Discipline carries it."
+    },
+    "text_0123": {
+      "group": "method",
+      "label": "An engineering thinking framework: move from an observation to a useful, supportable system."
+    },
+    "text_0124": {
+      "group": "insights",
+      "label": "07 / NOTES & TEACHING"
+    },
+    "text_0125": {
+      "group": "insights",
+      "label": "Build understanding."
+    },
+    "text_0126": {
+      "group": "insights",
+      "label": "Pass it on."
+    },
+    "text_0127": {
+      "group": "insights",
+      "label": "Robotics teaching and practical engineering share a simple joy: making a difficult idea feel approac"
+    },
+    "text_0128": {
+      "group": "more",
+      "label": "08 / BEYOND THE DAY JOB"
+    },
+    "text_0129": {
+      "group": "more",
+      "label": "Curiosity didn’t"
+    },
+    "text_0130": {
+      "group": "more",
+      "label": "start yesterday."
+    },
+    "text_0131": {
+      "group": "more",
+      "label": "Historical recognition, teaching, and the human side of the work."
+    },
+    "text_0132": {
+      "group": "more",
+      "label": "THE MAKER / SUPPLIED PORTRAIT"
+    },
+    "text_0133": {
+      "group": "more",
+      "label": "Teaching & service"
+    },
+    "text_0134": {
+      "group": "more",
+      "label": "Kids’ robotics teaching, 2019–2022. University volunteer mathematics outreach for rural schools in P"
+    },
+    "text_0135": {
+      "group": "more",
+      "label": "References"
+    },
+    "text_0136": {
+      "group": "more",
+      "label": "Professional and academic references available upon request."
+    },
+    "text_0137": {
+      "group": "contact",
+      "label": "THE NEXT GOOD CONVERSATION"
+    },
+    "text_0138": {
+      "group": "contact",
+      "label": "Great things start"
+    },
+    "text_0139": {
+      "group": "contact",
+      "label": "with a hello."
+    },
+    "text_0140": {
+      "group": "contact",
+      "label": "Interested in senior software engineering, applied AI, DevOps / reliability, and innovative product "
+    },
+    "text_0141": {
+      "group": "contact",
+      "label": "ranaweerahansana@gmail.com"
+    },
+    "text_0142": {
+      "group": "contact",
+      "label": "↗"
+    },
+    "text_0143": {
+      "group": "contact",
+      "label": "Download résumé ↓"
+    },
+    "text_0144": {
+      "group": "contact",
+      "label": "LinkedIn ↗"
+    },
+    "text_0145": {
+      "group": "contact",
+      "label": "GitHub ↗"
+    },
+    "text_0146": {
+      "group": "contact",
+      "label": "Notice period and start date to be discussed."
+    },
+    "text_0147": {
+      "group": "General",
+      "label": "© 2026 HANSANA RANAWEERA"
+    },
+    "text_0148": {
+      "group": "General",
+      "label": "BUILT WITH CARE. POWERED BY CURIOSITY."
+    },
+    "text_0149": {
+      "group": "General",
+      "label": "Back to top ↑"
+    },
+    "text_0150": {
+      "group": "General",
+      "label": "⌕"
+    },
+    "text_0151": {
+      "group": "General",
+      "label": "Find anything"
+    },
+    "text_0152": {
+      "group": "General",
+      "label": "Ctrl K"
+    },
+    "text_0153": {
+      "group": "General",
+      "label": "Recruiter brief ↗"
+    }
+  },
+  "document": [
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "element",
+      "tag": "a",
+      "attrs": {
+        "class": "skip",
+        "href": "#main"
+      },
+      "children": [
+        {
+          "type": "copy",
+          "key": "text_0001"
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "div",
+      "attrs": {
+        "class": "reading-progress",
+        "aria-hidden": "true"
+      },
+      "children": []
+    },
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "element",
+      "tag": "header",
+      "attrs": {
+        "class": "header"
+      },
+      "children": [
+        {
+          "type": "element",
+          "tag": "a",
+          "attrs": {
+            "class": "brand",
+            "href": "#about",
+            "aria-label": "Hansana Ranaweera, introduction"
+          },
+          "children": [
+            {
+              "type": "copy",
+              "key": "text_0002"
+            },
+            {
+              "type": "element",
+              "tag": "span",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "copy",
+                  "key": "text_0003"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tag": "i",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "copy",
+                  "key": "text_0004"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "nav",
+          "attrs": {
+            "id": "navigation",
+            "aria-label": "Primary"
+          },
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "div",
+          "attrs": {
+            "class": "header-tools"
+          },
+          "children": [
+            {
+              "type": "element",
+              "tag": "button",
+              "attrs": {
+                "class": "find-button",
+                "data-find": "",
+                "aria-label": "Search portfolio"
+              },
+              "children": [
+                {
+                  "type": "copy",
+                  "key": "text_0005"
+                },
+                {
+                  "type": "element",
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0006"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tag": "div",
+              "attrs": {
+                "class": "mode-switch",
+                "role": "group",
+                "aria-label": "Experience mode"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "button",
+                  "attrs": {
+                    "data-mode": "quick",
+                    "aria-pressed": "false"
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0007"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "button",
+                  "attrs": {
+                    "data-mode": "immersive",
+                    "aria-pressed": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0008"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tag": "a",
+              "attrs": {
+                "class": "header-cv",
+                "href": "{{profile.resume}}",
+                "download": ""
+              },
+              "children": [
+                {
+                  "type": "copy",
+                  "key": "text_0009"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tag": "button",
+              "attrs": {
+                "class": "menu",
+                "aria-label": "Open navigation",
+                "aria-expanded": "false",
+                "aria-controls": "navigation"
+              },
+              "children": [
+                {
+                  "type": "copy",
+                  "key": "text_0010"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "element",
+      "tag": "div",
+      "attrs": {
+        "class": "layout"
+      },
+      "children": [
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "element",
+          "tag": "aside",
+          "attrs": {
+            "class": "hero",
+            "id": "about",
+            "aria-label": "Introduction"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "div",
+              "attrs": {
+                "class": "hero-copy"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "p",
+                  "attrs": {
+                    "class": "eyebrow"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {
+                        "class": "status-dot",
+                        "aria-hidden": "true"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "binding",
+                      "value": "{{profile.positioning}} · {{profile.location}}"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "h1",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "binding",
+                      "value": "{{profile.firstName}}"
+                    },
+                    {
+                      "type": "element",
+                      "tag": "br",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "binding",
+                      "value": "{{profile.lastName}}"
+                    },
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0011"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "p",
+                  "attrs": {
+                    "class": "hero-line"
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0012"
+                    },
+                    {
+                      "type": "element",
+                      "tag": "br",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "em",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0013"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "p",
+                  "attrs": {
+                    "class": "hero-description"
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0014"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "p",
+                  "attrs": {
+                    "class": "current-role"
+                  },
+                  "children": [
+                    {
+                      "type": "binding",
+                      "value": "{{profile.role}} at "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "strong",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "binding",
+                          "value": "{{profile.company}}"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "binding",
+                          "value": "{{profile.industry}} · {{profile.period}}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "p",
+                  "attrs": {
+                    "class": "hero-focus"
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0015"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "actions"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "class": "button primary",
+                        "href": "#work"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0016"
+                        },
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0017"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "class": "button",
+                        "href": "{{profile.resume}}",
+                        "download": ""
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0018"
+                        },
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0019"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "hero-links"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "mailto:{{profile.email}}"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0020"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "{{profile.linkedin}}",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0021"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "{{profile.github}}",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0022"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "nav",
+                  "attrs": {
+                    "class": "quick-index",
+                    "aria-label": "Quick view index"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#work"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0023"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#skills"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0024"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#experience"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0025"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#credentials"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0026"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#contact"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0027"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "div",
+              "attrs": {
+                "class": "hero-portrait",
+                "aria-label": "Portrait of Hansana"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "portrait-tech",
+                    "aria-hidden": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "fintech-sheet"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "svg",
+                          "attrs": {
+                            "viewBox": "0 0 280 170",
+                            "fill": "none"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "text",
+                              "attrs": {
+                                "x": "15",
+                                "y": "19",
+                                "fill": "currentColor",
+                                "font-family": "monospace",
+                                "font-size": "8",
+                                "letter-spacing": "1"
+                              },
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0028"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M16 30H261",
+                                "stroke": "currentColor",
+                                "opacity": ".4"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "16",
+                                "y": "50",
+                                "width": "63",
+                                "height": "35",
+                                "rx": "5",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "109",
+                                "y": "50",
+                                "width": "63",
+                                "height": "35",
+                                "rx": "5",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "202",
+                                "y": "50",
+                                "width": "63",
+                                "height": "35",
+                                "rx": "5",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M79 67H109M172 67H202M103 63L109 67L103 71M196 63L202 67L196 71",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "g",
+                              "attrs": {
+                                "font-family": "monospace",
+                                "font-size": "7",
+                                "fill": "currentColor",
+                                "text-anchor": "middle"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "47",
+                                    "y": "71"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "copy",
+                                      "key": "text_0029"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "140",
+                                    "y": "71"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "copy",
+                                      "key": "text_0030"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "233",
+                                    "y": "71"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "copy",
+                                      "key": "text_0031"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M47 85V115H233V85",
+                                "stroke": "currentColor",
+                                "stroke-dasharray": "3 5"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "cx": "140",
+                                "cy": "115",
+                                "r": "4",
+                                "fill": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M19 148H88M19 156H64",
+                                "stroke": "currentColor",
+                                "opacity": ".5"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "text",
+                              "attrs": {
+                                "x": "172",
+                                "y": "152",
+                                "fill": "currentColor",
+                                "font-family": "monospace",
+                                "font-size": "7"
+                              },
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0032"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "hero-iconfield",
+                        "aria-hidden": "true"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "planning-sheet"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "svg",
+                          "attrs": {
+                            "viewBox": "0 0 250 280",
+                            "fill": "none"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "defs",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tag": "pattern",
+                                  "attrs": {
+                                    "id": "planning-grid",
+                                    "width": "15",
+                                    "height": "15",
+                                    "patternUnits": "userSpaceOnUse"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "tag": "path",
+                                      "attrs": {
+                                        "d": "M15 0H0V15",
+                                        "stroke": "currentColor",
+                                        "stroke-width": ".3",
+                                        "opacity": ".3"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "1",
+                                "y": "1",
+                                "width": "248",
+                                "height": "278",
+                                "rx": "8",
+                                "fill": "#f6f9f7",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "10",
+                                "y": "10",
+                                "width": "230",
+                                "height": "260",
+                                "fill": "url(#planning-grid)"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "text",
+                              "attrs": {
+                                "x": "21",
+                                "y": "30",
+                                "font-family": "monospace",
+                                "font-size": "9",
+                                "fill": "currentColor"
+                              },
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0033"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M20 42H226",
+                                "stroke": "currentColor",
+                                "opacity": ".4"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "23",
+                                "y": "61",
+                                "width": "78",
+                                "height": "30",
+                                "rx": "4",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "144",
+                                "y": "61",
+                                "width": "78",
+                                "height": "30",
+                                "rx": "4",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "23",
+                                "y": "131",
+                                "width": "78",
+                                "height": "30",
+                                "rx": "4",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "144",
+                                "y": "131",
+                                "width": "78",
+                                "height": "30",
+                                "rx": "4",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M101 76H144M183 91V111H62V131M101 146H144M183 161V181H62V161",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M138 72L144 76L138 80M58 125L62 131L66 125M138 142L144 146L138 150",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "g",
+                              "attrs": {
+                                "fill": "currentColor",
+                                "font-family": "monospace",
+                                "font-size": "8",
+                                "text-anchor": "middle"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "62",
+                                    "y": "80"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "copy",
+                                      "key": "text_0034"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "183",
+                                    "y": "80"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "copy",
+                                      "key": "text_0035"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "62",
+                                    "y": "150"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "copy",
+                                      "key": "text_0036"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "tag": "text",
+                                  "attrs": {
+                                    "x": "183",
+                                    "y": "150"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "copy",
+                                      "key": "text_0037"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M25 211H85M25 224H111M25 237H77",
+                                "stroke": "currentColor",
+                                "opacity": ".5"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "cx": "184",
+                                "cy": "222",
+                                "r": "23",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M171 222L181 232L198 212",
+                                "stroke": "currentColor"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "text",
+                              "attrs": {
+                                "x": "22",
+                                "y": "262",
+                                "font-family": "monospace",
+                                "font-size": "7",
+                                "fill": "currentColor"
+                              },
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0038"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "tech-motif tech-cloud"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "svg",
+                          "attrs": {
+                            "viewBox": "0 0 130 90"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M26 49H17C4 48 3 29 17 26C19 7 48 4 58 22C74 11 94 22 91 38C106 39 105 58 91 58H70M40 57V75H23M57 57V84M74 57V75H91"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "11",
+                                "y": "73",
+                                "width": "18",
+                                "height": "12",
+                                "rx": "2"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "48",
+                                "y": "78",
+                                "width": "18",
+                                "height": "12",
+                                "rx": "2"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "rect",
+                              "attrs": {
+                                "x": "88",
+                                "y": "73",
+                                "width": "18",
+                                "height": "12",
+                                "rx": "2"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0039"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "tech-motif tech-data"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "svg",
+                          "attrs": {
+                            "viewBox": "0 0 100 90"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "ellipse",
+                              "attrs": {
+                                "cx": "50",
+                                "cy": "18",
+                                "rx": "30",
+                                "ry": "10"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M20 18V67C20 81 80 81 80 67V18M20 42C20 56 80 56 80 42M20 63C20 77 80 77 80 63"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0040"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "svg",
+                      "attrs": {
+                        "class": "tech-connectors",
+                        "viewBox": "0 0 640 290",
+                        "preserveAspectRatio": "none"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "path",
+                          "attrs": {
+                            "d": "M50 85C140 15 220 45 320 115S510 190 590 70M65 220C180 160 240 235 320 165S480 130 580 225"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "tech-motif tech-ai"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "svg",
+                          "attrs": {
+                            "viewBox": "0 0 120 80"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M18 16L57 10L99 23L91 63L49 70L18 49ZM18 16L49 70M57 10L18 49L99 23L49 70M57 10L91 63L18 49"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "class": "node",
+                                "cx": "18",
+                                "cy": "16",
+                                "r": "3"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "class": "node",
+                                "cx": "57",
+                                "cy": "10",
+                                "r": "3"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "class": "node",
+                                "cx": "99",
+                                "cy": "23",
+                                "r": "3"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "class": "node",
+                                "cx": "91",
+                                "cy": "63",
+                                "r": "3"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "class": "node",
+                                "cx": "49",
+                                "cy": "70",
+                                "r": "3"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "class": "node",
+                                "cx": "18",
+                                "cy": "49",
+                                "r": "3"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "circle",
+                              "attrs": {
+                                "class": "signal",
+                                "cx": "57",
+                                "cy": "40",
+                                "r": "4"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0041"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "tech-motif tech-vr"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "svg",
+                          "attrs": {
+                            "viewBox": "0 0 130 70"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M25 21Q65 4 105 21L110 47Q94 59 75 50L65 42L55 50Q36 59 20 47Z"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M30 26Q65 15 100 26L100 43Q84 48 72 39H58Q44 48 30 43ZM20 29L10 30V42L20 43M107 29L120 30V42L110 43M45 18Q65 3 85 18"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0042"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "tech-motif tech-cube"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "svg",
+                          "attrs": {
+                            "viewBox": "0 0 100 90"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "d": "M50 8L88 29V66L50 87L12 66V29ZM12 29L50 51L88 29M50 51V87M50 8V44M12 66L44 47M88 66L56 47"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "path",
+                              "attrs": {
+                                "stroke-dasharray": "3 5",
+                                "d": "M50 8V44L88 66M50 44L12 66"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0043"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "tech-motif tech-ops"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "class": "log-heading"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "i",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "copy",
+                              "key": "text_0044"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "code",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0045"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "copy",
+                              "key": "text_0046"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "code",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0047"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "copy",
+                              "key": "text_0048"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "code",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0049"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "copy",
+                              "key": "text_0050"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " "
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "portrait-orbits",
+                    "aria-hidden": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "i",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "i",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "i",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "b",
+                      "attrs": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "span",
+                  "attrs": {
+                    "class": "portrait-label"
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0051"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "picture",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "source",
+                      "attrs": {
+                        "srcset": "{{hero.portrait}}",
+                        "type": "image/webp"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "{{hero.portraitFallback}}",
+                        "width": "1085",
+                        "height": "1450",
+                        "alt": "Hansana smiling naturally in a navy blazer",
+                        "fetchpriority": "high"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "portrait-footer"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0052"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0053"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "div",
+              "attrs": {
+                "class": "hero-foot"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0054"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "button",
+                  "attrs": {
+                    "data-brief": ""
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0055"
+                    },
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0056"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": " "
+        },
+        {
+          "type": "element",
+          "tag": "main",
+          "attrs": {
+            "id": "main",
+            "tabindex": "-1"
+          },
+          "children": [
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "div",
+              "attrs": {
+                "class": "proof-strip",
+                "aria-label": "At a glance"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {
+                        "class": "proof-symbol",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0057"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0058"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0059"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {
+                        "class": "proof-symbol",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0060"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0061"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0062"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {
+                        "class": "proof-symbol",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0063"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "small",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0064"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0065"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "class": "world-section",
+                "id": "world",
+                "aria-labelledby": "world-title"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "world-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0066"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {
+                            "id": "world-title"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0067"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0068"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0069"
+                        },
+                        {
+                          "type": "element",
+                          "tag": "br",
+                          "attrs": {},
+                          "children": []
+                        },
+                        {
+                          "type": "copy",
+                          "key": "text_0070"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "world-stage",
+                    "id": "world-stage"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "world-fallback",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "fallback-island"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "i",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "i",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "i",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "b",
+                              "attrs": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "canvas",
+                      "attrs": {
+                        "id": "world-canvas",
+                        "aria-label": "Animated abstract engineering world, showing connected platforms and sculptural system nodes",
+                        "role": "img"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "world-topline"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0071"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "button",
+                          "attrs": {
+                            "id": "motion-toggle",
+                            "aria-pressed": "false"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0072"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "world-label"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "class": "status-dot",
+                            "aria-hidden": "true"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "id": "world-label"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0073"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "world-controls",
+                        "role": "group",
+                        "aria-label": "Explore the 3D world"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "button",
+                          "attrs": {
+                            "data-scene": "0",
+                            "aria-pressed": "true"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0074"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "copy",
+                              "key": "text_0075"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "button",
+                          "attrs": {
+                            "data-scene": "1",
+                            "aria-pressed": "false"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0076"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "copy",
+                              "key": "text_0077"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "button",
+                          "attrs": {
+                            "data-scene": "2",
+                            "aria-pressed": "false"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0078"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "copy",
+                              "key": "text_0079"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "world-caption"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {
+                        "id": "world-description",
+                        "aria-live": "polite"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0080"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0081"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "work",
+                "class": "section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0082"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0083"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0084"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0085"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "id": "work-list",
+                    "class": "work-list"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "secondary-work"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "span",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0086"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-project": "suwasewana"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0087"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-project": "saftac"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0088"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "skills",
+                "class": "section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0089"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0090"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0091"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0092"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "id": "skills-list",
+                    "class": "skills-list"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "experience",
+                "class": "section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0093"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0094"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0095"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0096"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "id": "timeline",
+                    "class": "timeline"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "education"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "credentials",
+                "class": "section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0097"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0098"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0099"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0100"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "credential-tabs",
+                    "role": "group",
+                    "aria-label": "Filter credentials"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-course-filter": "all",
+                        "aria-pressed": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0101"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-course-filter": "Software",
+                        "aria-pressed": "false"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0102"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-course-filter": "Generative AI",
+                        "aria-pressed": "false"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0103"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-course-filter": "Systems",
+                        "aria-pressed": "false"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0104"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "id": "credentials-list",
+                    "class": "credentials-list"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tag": "p",
+                  "attrs": {
+                    "id": "credential-status",
+                    "class": "sr-only",
+                    "role": "status"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tag": "details",
+                  "attrs": {
+                    "class": "completion-records"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "summary",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0105"
+                        },
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0106"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0107"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "completion-gallery"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "button",
+                          "attrs": {
+                            "data-evidence": "a"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "img",
+                              "attrs": {
+                                "src": "/assets/certificates/certificate-screenshot-a.png",
+                                "loading": "lazy",
+                                "width": "1461",
+                                "height": "336",
+                                "alt": "Completion list for Meta Advanced React and University of Alberta Software Product Management"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0108"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "button",
+                          "attrs": {
+                            "data-evidence": "b"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "img",
+                              "attrs": {
+                                "src": "/assets/certificates/certificate-screenshot-b.png",
+                                "loading": "lazy",
+                                "width": "1471",
+                                "height": "925",
+                                "alt": "Completion list for IBM, Pearson, LearnKartS and DeepLearning.AI courses"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "span",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0109"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "details",
+                  "attrs": {
+                    "class": "additional"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "summary",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0110"
+                        },
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0111"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "id": "additional-list"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "lab",
+                "class": "section lab-section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0112"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0113"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0114"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0115"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "lab-filter",
+                    "role": "group",
+                    "aria-label": "Filter independent lab"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-filter": "all",
+                        "aria-pressed": "true"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0116"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-filter": "systems",
+                        "aria-pressed": "false"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0117"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-filter": "ai",
+                        "aria-pressed": "false"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0118"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "button",
+                      "attrs": {
+                        "data-filter": "hardware",
+                        "aria-pressed": "false"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0119"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "p",
+                  "attrs": {
+                    "id": "lab-status",
+                    "class": "sr-only",
+                    "role": "status"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "id": "lab-list",
+                    "class": "lab-list"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "method",
+                "class": "section method-section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0120"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0121"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0122"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0123"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "id": "method-steps",
+                    "class": "method-steps",
+                    "role": "group",
+                    "aria-label": "Explore the engineering framework"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "method-detail",
+                    "id": "method-detail",
+                    "aria-live": "polite"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "insights",
+                "class": "section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0124"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0125"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0126"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0127"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "id": "notes-list",
+                    "class": "notes-list"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "more",
+                "class": "section more-section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-heading"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "eyebrow"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0128"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0129"
+                            },
+                            {
+                              "type": "element",
+                              "tag": "br",
+                              "attrs": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "em",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "type": "copy",
+                                  "key": "text_0130"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0131"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "more-layout"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "portrait-note"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "picture",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "tag": "source",
+                              "attrs": {
+                                "srcset": "{{profile.originalPortrait}}",
+                                "type": "image/webp"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "tag": "img",
+                              "attrs": {
+                                "src": "{{profile.originalPortraitFallback}}",
+                                "width": "1085",
+                                "height": "1449",
+                                "loading": "lazy",
+                                "alt": "Hansana smiling against a soft grey background"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0132"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "recognition"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "more-notes"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "article",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0133"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0134"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "article",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "h3",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0135"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0136"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "section",
+              "attrs": {
+                "id": "contact",
+                "class": "section contact-section"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {
+                        "class": "eyebrow"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "class": "status-dot",
+                            "aria-hidden": "true"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "copy",
+                          "key": "text_0137"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "h2",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0138"
+                        },
+                        {
+                          "type": "element",
+                          "tag": "br",
+                          "attrs": {},
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "tag": "em",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0139"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0140"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "class": "contact-email",
+                        "href": "mailto:{{profile.email}}"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0141"
+                        },
+                        {
+                          "type": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "aria-hidden": "true"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0142"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "contact-links"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "{{profile.resume}}",
+                            "download": ""
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0143"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "{{profile.linkedin}}",
+                            "target": "_blank",
+                            "rel": "noopener noreferrer"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0144"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "{{profile.github}}",
+                            "target": "_blank",
+                            "rel": "noopener noreferrer"
+                          },
+                          "children": [
+                            {
+                              "type": "copy",
+                              "key": "text_0145"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tag": "p",
+                      "attrs": {
+                        "class": "availability"
+                      },
+                      "children": [
+                        {
+                          "type": "copy",
+                          "key": "text_0146"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "contact-sculpture",
+                    "aria-hidden": "true"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "tag": "i",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "i",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "i",
+                      "attrs": {},
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "tag": "b",
+                      "attrs": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "element",
+              "tag": "footer",
+              "attrs": {
+                "class": "footer"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0147"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0148"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "tag": "a",
+                  "attrs": {
+                    "href": "#about"
+                  },
+                  "children": [
+                    {
+                      "type": "copy",
+                      "key": "text_0149"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "value": " "
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "element",
+      "tag": "div",
+      "attrs": {
+        "class": "utility-dock"
+      },
+      "children": [
+        {
+          "type": "element",
+          "tag": "button",
+          "attrs": {
+            "data-find": ""
+          },
+          "children": [
+            {
+              "type": "copy",
+              "key": "text_0150"
+            },
+            {
+              "type": "element",
+              "tag": "span",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "copy",
+                  "key": "text_0151"
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "tag": "kbd",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "copy",
+                  "key": "text_0152"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "tag": "span",
+          "attrs": {},
+          "children": []
+        },
+        {
+          "type": "element",
+          "tag": "button",
+          "attrs": {
+            "data-brief": ""
+          },
+          "children": [
+            {
+              "type": "copy",
+              "key": "text_0153"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "element",
+      "tag": "p",
+      "attrs": {
+        "class": "sr-only",
+        "id": "mode-status",
+        "role": "status"
+      },
+      "children": []
+    },
+    {
+      "type": "text",
+      "value": " "
+    }
+  ],
+  "labels": {
+    "close": "Close ×",
+    "closerLook": "A CLOSER LOOK",
+    "viewRecord": "View completion record ↗",
+    "readMore": "Read more ↗",
+    "exploreCase": "Explore case study",
+    "recognition": "Early recognition",
+    "visitProject": "Visit project ↗",
+    "verifyCredential": "Verify credential ↗",
+    "originalRecord": "Original completion record",
+    "experience": "Experience",
+    "capabilities": "Capabilities",
+    "downloadResume": "Download résumé ↓",
+    "findAnything": "Find anything",
+    "searchPrompt": "Search projects, technologies, courses and sections",
+    "searchPlaceholder": "Try React, DirectFN or AI…",
+    "searchStart": "Start typing to explore.",
+    "results": "results",
+    "section": "Page section",
+    "resumeMotion": "Resume motion ▷",
+    "pauseMotion": "Pause motion Ⅱ",
+    "draftPreview": "Draft preview · visible only while signed in",
+    "backToEditor": "Back to editor ↗",
+    "conceptualStudy": "CONCEPTUAL STUDY"
+  }
+}

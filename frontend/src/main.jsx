@@ -1,0 +1,6 @@
+import React,{Suspense,lazy,useEffect,useState} from 'react';
+import {createRoot} from 'react-dom/client';
+const Admin=lazy(()=>import('./admin/AdminApp.jsx'));
+const Portfolio=lazy(()=>import('./Portfolio.jsx'));
+function App(){const [error,setError]=useState(''),[site,setSite]=useState(null);const admin=location.pathname.startsWith('/admin'),preview=new URLSearchParams(location.search).has('preview');useEffect(()=>{if(admin)return;const load=()=>fetch(preview?'/api/admin/site':'/api/site').then(async r=>{const d=await r.json();if(!r.ok)throw new Error(d.error);setSite(d.site);setError('');}).catch(e=>setError(e.message));load();if(preview)return;const stream=new EventSource('/api/site/stream');stream.onmessage=load;return()=>stream.close();},[admin,preview]);return <Suspense fallback={<p style={{padding:40}}>Opening portfolio…</p>}>{admin?<Admin/>:error?<div style={{padding:40}}><h1>Unable to open the website</h1><p>{error}</p><a href={preview?'/admin':'/'}>{preview?'Sign in to view the draft':'Try again'}</a></div>:site?<Portfolio site={site} preview={preview}/>:<p style={{padding:40}}>Opening portfolio…</p>}</Suspense>;}
+createRoot(document.getElementById('root')).render(<App/>);

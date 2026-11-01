@@ -1,0 +1,2 @@
+import {readFile,access} from 'node:fs/promises';
+const s=JSON.parse(await readFile('seed/site.json','utf8'));const urls=new Set();function walk(v){if(typeof v==='string'&&v.startsWith('/assets/'))urls.add(v);else if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v==='object')Object.values(v).forEach(walk);}walk(s);for(const url of urls)await access('frontend/public'+url);console.log(urls.size+' seeded asset references verified');

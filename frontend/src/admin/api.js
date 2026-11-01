@@ -1,0 +1,2 @@
+let csrf='';export function setCsrf(v){csrf=v;}
+export async function api(path,options={}){const form=options.body instanceof FormData;const response=await fetch('/api'+path,{...options,credentials:'same-origin',headers:{...(options.body&&!form?{'Content-Type':'application/json'}:{}),...(csrf?{'X-CSRF-Token':csrf}:{}),...options.headers},body:options.body&&!form?JSON.stringify(options.body):options.body});const data=await response.json();if(!response.ok){const e=new Error(data.error||'Request failed.');e.status=response.status;e.issues=data.issues;throw e;}return data;}

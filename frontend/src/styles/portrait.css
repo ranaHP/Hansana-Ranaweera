@@ -1,0 +1,55 @@
+/* Match the supplied landscape reference; keep the portrait pixels unchanged. */
+.hero-portrait{min-height:0;max-height:none;aspect-ratio:1.95;align-self:center;background:#e5e9e7;border-radius:14px;isolation:isolate}
+.hero-portrait picture{inset:24px 0 -68px;z-index:3;pointer-events:none}
+.hero-portrait img{width:100%;height:100%;object-fit:contain;object-position:center top}
+.hero-portrait .portrait-label,.hero-portrait .portrait-orbits{display:none}
+.portrait-footer{height:40px;background:var(--page);padding:13px 10px 0;align-items:start;font-size:8px;letter-spacing:.04em;z-index:5;color:#55738a}
+.portrait-footer>span:last-child{font-size:7px;text-align:right;color:#738b91}
+.portrait-tech{position:absolute;inset:0 0 40px;z-index:1;pointer-events:none;overflow:hidden;background:radial-gradient(ellipse at 50% 90%,#d4ddda66,transparent 65%)}
+.tech-connectors{position:absolute;inset:0;width:100%;height:100%;opacity:.22;fill:none;stroke:#91aaa7;stroke-width:1;stroke-dasharray:3 8}
+.tech-motif{position:absolute;color:#728f92;opacity:.38;width:23%;max-width:155px}
+.tech-motif svg{display:block;width:100%;height:auto;fill:none;stroke:currentColor;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.tech-motif small{font:8px/1.5 'Segoe UI',sans-serif;letter-spacing:.12em;display:block;margin-top:5px;color:#547681}
+.tech-ai{left:5%;top:13%;transform:rotate(-5deg)}
+.tech-ai svg{width:83%;max-height:73px}.tech-ai .node{fill:#a8bfb8;stroke:#7d9d96}.tech-ai .signal{fill:#789cc3;stroke:none}
+.tech-vr{right:5%;top:16%;transform:rotate(6deg)}.tech-vr svg{max-height:62px}
+.tech-cube{left:7%;bottom:12%;width:17%;transform:rotate(-8deg)}.tech-cube svg{max-height:80px}
+.tech-ops{right:4%;bottom:11%;width:24%;font-family:Consolas,'Courier New',monospace;opacity:.4}
+.tech-ops .log-heading{display:flex;align-items:center;gap:5px;font:8px/1.5 'Segoe UI',sans-serif;letter-spacing:.1em;margin-bottom:7px}
+.tech-ops .log-heading i{width:4px;height:4px;border-radius:50%;background:#769f8b;display:inline-block}
+.tech-ops code{display:block;font:8px/1.9 Consolas,'Courier New',monospace;color:#6b888b;white-space:nowrap}
+.tech-ops code>span{color:#648f7a}
+.portrait-note{height:auto;aspect-ratio:1.95}.portrait-note picture{inset:20px 0 -70px}.portrait-note img{object-position:center top}.portrait-note>p{padding:12px 0 0;height:32px;font-size:8px}
+@media(prefers-reduced-motion:no-preference){.tech-ai .signal{animation:signal-breathe 5s ease-in-out infinite}.tech-vr{animation:visor-float 10s ease-in-out infinite alternate}.tech-cube{animation:cube-float 12s ease-in-out infinite alternate}.tech-connectors{animation:signal-travel 35s linear infinite}@keyframes signal-breathe{0%,100%{opacity:.35}50%{opacity:.9}}@keyframes visor-float{to{translate:0 -4px;rotate:-2deg}}@keyframes cube-float{to{translate:0 4px;rotate:3deg}}@keyframes signal-travel{to{stroke-dashoffset:-110}}}
+@media(max-width:1000px){.hero-portrait{min-height:0;max-height:none;aspect-ratio:1.8}.hero-portrait picture{inset:18px 0 -55px}.portrait-footer{height:35px;padding:11px 7px 0;font-size:7px}.portrait-tech{bottom:35px}.portrait-footer>span:last-child{display:none}.tech-motif small{font-size:6px}.tech-ai{left:4%;top:15%}.tech-vr{right:4%;top:17%}.tech-ops code{font-size:6px}.tech-ops .log-heading{font-size:6px;margin-bottom:4px}.tech-ops{right:3%;width:26%}.tech-cube{bottom:13%}.portrait-note{height:auto;aspect-ratio:1.95}}
+@media(max-width:650px){.hero{gap:27px}.hero-portrait{min-height:0;max-height:none;width:100%;aspect-ratio:1.95;margin-top:0}.hero-portrait picture{inset:15px 0 -42px}.portrait-footer{height:32px;padding:10px 6px 0;font-size:7px}.portrait-tech{bottom:32px}.tech-ai{left:5%;top:13%}.tech-vr{right:5%;top:16%}.tech-cube{left:6%;bottom:13%}.tech-ops{bottom:10%;right:3%}.tech-motif small{font-size:6px;letter-spacing:.08em}.tech-ops code{font-size:6px;line-height:1.8}.tech-ops .log-heading{font-size:6px}.portrait-note{height:auto;aspect-ratio:1.95}.portrait-note picture{inset:15px 0 -45px}.portrait-note>p{height:30px;padding-top:10px;font-size:7px}}
+@media(max-width:360px){.hero-portrait{min-height:0;max-height:none;aspect-ratio:1.9}.hero-portrait picture{inset:13px 0 -40px}.tech-ops code{font-size:5px}.tech-motif small,.tech-ops .log-heading{font-size:5px}}
+@media print{.portrait-tech{display:none}}
+.portrait-note{width:100%;min-width:0}html[data-mode=quick] .portrait-note{height:auto;aspect-ratio:1.95}html[data-mode=quick] .portrait-note picture{inset:15px 0 -55px}
+/* Larger human presence, with an illustrated planning workspace behind it. */
+.hero-portrait{aspect-ratio:1.3;border-radius:17px}
+.hero-portrait picture{inset:28px -5% -105px}
+.portrait-tech{background:radial-gradient(ellipse at 50% 55%,#f0f3ed88,transparent 62%),#e5e9e7}
+.planning-sheet{position:absolute;left:3%;top:24%;width:43%;color:#789394;opacity:.3;transform:rotate(-9deg);filter:drop-shadow(0 5px 9px #5a797b10)}
+.planning-sheet svg{display:block;width:100%;height:auto}
+.tech-motif{opacity:.48}
+.tech-ai{left:5%;top:7%;width:21%}
+.tech-vr{right:5%;top:9%;width:22%}
+.tech-cube{left:4%;bottom:8%;width:17%}
+.tech-ops{right:3%;bottom:8%;width:25%;opacity:.5}
+.tech-cloud{right:3%;top:33%;width:18%;transform:rotate(7deg)}
+.tech-code{left:4%;top:48%;width:15%;transform:rotate(-7deg);opacity:.35}
+.tech-data{right:6%;bottom:25%;width:13%;transform:rotate(6deg);opacity:.4}
+.tech-motif small{font-size:8px;line-height:1.6}
+.tech-ops code{font-size:8px;line-height:2}
+@media(max-width:1000px){.hero-portrait{aspect-ratio:1.1}.hero-portrait picture{inset:25px -12% -85px}.planning-sheet{width:49%;top:26%;left:1%}.tech-motif small{font-size:6px}.tech-ops code{font-size:6px}.tech-cloud{top:34%}.tech-data{bottom:28%}}
+@media(max-width:650px){.hero-portrait{aspect-ratio:1.25}.hero-portrait picture{inset:20px -8% -70px}.planning-sheet{width:44%;top:25%;left:2%}.tech-ai{top:8%}.tech-vr{top:10%}.tech-cloud{top:35%}.tech-data{bottom:27%}.tech-motif small{font-size:6px}.tech-ops code{font-size:6px}.tech-ops .log-heading{font-size:6px}}
+@media(max-width:360px){.hero-portrait{aspect-ratio:1.2}.hero-portrait picture{inset:18px -10% -65px}.tech-motif small{font-size:5px}.tech-ops code{font-size:5px}.tech-ops .log-heading{font-size:5px}}
+.portrait-tech>.tech-motif{display:none}.portrait-tech .planning-sheet{opacity:.22}.hero-iconfield{position:absolute;inset:0;z-index:2;pointer-events:none}.hero-tech-icon{position:absolute;width:8%;max-width:49px;min-width:28px;display:flex;align-items:center;flex-direction:column;gap:6px;opacity:.48;transform:rotate(var(--tilt,0deg))}.hero-tech-icon>img{width:32px;height:32px;object-fit:contain;opacity:.7}.hero-tech-icon>span{font:8px/1.4 'Segoe UI',sans-serif;letter-spacing:.02em;color:#547581;white-space:nowrap}.icon-react{left:7%;top:7%;--tilt:-7deg}.icon-angular{left:28%;top:5%;--tilt:6deg}.icon-linux{left:3%;top:29%;--tilt:-5deg}.icon-printer-3d{left:7%;top:49%;--tilt:4deg}.icon-arduino{left:3%;top:74%;--tilt:-4deg}.icon-raspberrypi{left:23%;top:83%;--tilt:5deg}.icon-ai-chip{left:63%;top:5%;--tilt:-5deg}.icon-openai{left:80%;top:10%;--tilt:5deg}.icon-local-llm{left:88%;top:30%;--tilt:-4deg}.icon-server-ops{left:82%;top:52%;--tilt:5deg}.icon-drone{left:88%;top:76%;--tilt:-7deg}.hero-tech-icon.icon-react>img,.hero-tech-icon.icon-angular>img,.hero-tech-icon.icon-linux>img,.hero-tech-icon.icon-openai>img,.hero-tech-icon.icon-arduino>img,.hero-tech-icon.icon-raspberrypi>img{filter:invert(41%) sepia(11%) saturate(631%) hue-rotate(145deg) brightness(93%);opacity:.75}
+@media(prefers-reduced-motion:no-preference){.hero-tech-icon{animation:tech-icon-float 9s ease-in-out infinite alternate}.hero-tech-icon:nth-child(2n){animation-delay:-3s;animation-duration:11s}.hero-tech-icon:nth-child(3n){animation-delay:-6s;animation-duration:13s}@keyframes tech-icon-float{to{translate:2px -4px;rotate:3deg}}}
+@media(max-width:1000px){.hero-tech-icon{gap:4px;min-width:24px}.hero-tech-icon>img{width:27px;height:27px}.hero-tech-icon>span{font-size:7px}.icon-local-llm{left:86%}.icon-drone{left:86%}}
+@media(max-width:650px){.hero-tech-icon{gap:4px;min-width:22px}.hero-tech-icon>img{width:24px;height:24px}.hero-tech-icon>span{font-size:6px}.icon-react{top:6%}.icon-angular{top:4%}.icon-ai-chip{top:4%}.icon-openai{top:8%}.icon-local-llm{left:87%}.icon-drone{left:87%}.icon-raspberrypi{top:82%}}
+@media(max-width:360px){.hero-tech-icon>img{width:21px;height:21px}.hero-tech-icon>span{font-size:5px}.hero-tech-icon{min-width:20px}}
+
+.icon-raspberrypi{left:20%;top:23%}.icon-vr{left:18%;top:42%;--tilt:6deg}
+@media(max-width:650px){.icon-raspberrypi{left:20%;top:23%}.icon-vr{left:18%;top:42%}}

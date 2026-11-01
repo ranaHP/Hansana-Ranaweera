@@ -1,0 +1,44 @@
+/* One shared composition: both columns occupy the same grid row. */
+html[data-mode=immersive] .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;column-gap:44px;row-gap:24px;margin-top:28px;padding:40px 40px 0;background:#eaf0ed;border:1px solid #dce5e0;border-radius:20px;overflow:hidden;isolation:isolate}
+html[data-mode=immersive] .hero-copy{padding:0;min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+html[data-mode=immersive] .hero-copy>.eyebrow{font-size:10px;letter-spacing:.1em}
+html[data-mode=immersive] .hero-copy h1{font-size:clamp(52px,5.1vw,76px);line-height:1.02;margin-top:21px;letter-spacing:-.06em}
+html[data-mode=immersive] .hero-line{font-size:29px;line-height:1.25;margin-top:22px}
+html[data-mode=immersive] .hero-description{font-size:14px;max-width:400px;margin-top:18px}
+html[data-mode=immersive] .current-role{margin-top:20px}
+html[data-mode=immersive] .actions{margin-top:22px}
+html[data-mode=immersive] .hero-links{margin-top:20px}
+html[data-mode=immersive] .hero-portrait{align-self:stretch;aspect-ratio:auto;min-height:0;max-height:none;width:100%;height:auto;background:transparent;border-radius:12px;overflow:hidden}
+html[data-mode=immersive] .hero-portrait picture{inset:22px -8% -100px}
+html[data-mode=immersive] .hero-portrait .portrait-footer{display:none}
+html[data-mode=immersive] .portrait-tech{inset:0;background:radial-gradient(ellipse at 50% 60%,#f4f7f155,transparent 65%)}
+html[data-mode=immersive] .hero-foot{margin:0;padding:22px 0 24px;border-bottom:0;border-top:1px solid #cddbd3;align-self:end}
+html[data-mode=immersive] .hero-foot>span{font-size:9px;line-height:1.7;letter-spacing:.07em}
+html[data-mode=immersive] .hero-foot>button{font-size:12px}
+html[data-mode=immersive] .planning-sheet{left:1%;top:24%;width:43%;opacity:.2}
+html[data-mode=immersive] .hero-tech-icon{opacity:.43}
+@media(max-width:1180px){html[data-mode=immersive] .hero{padding:32px 30px 0;column-gap:30px}html[data-mode=immersive] .hero-copy h1{font-size:60px}html[data-mode=immersive] .hero-line{font-size:26px}html[data-mode=immersive] .hero-copy>.eyebrow{font-size:9px}html[data-mode=immersive] .hero-description{font-size:13px}html[data-mode=immersive] .hero-foot>span{font-size:8px}html[data-mode=immersive] .hero-foot>button{font-size:11px}}
+@media(max-width:950px){html[data-mode=immersive] .hero{padding:28px 26px 0;column-gap:22px;row-gap:21px;margin-top:23px}html[data-mode=immersive] .hero-copy h1{font-size:50px}html[data-mode=immersive] .hero-copy>.eyebrow{font-size:8px}html[data-mode=immersive] .hero-line{font-size:23px;margin-top:20px}html[data-mode=immersive] .hero-description{font-size:12px}html[data-mode=immersive] .current-role{font-size:12px}html[data-mode=immersive] .current-role>span{font-size:11px}html[data-mode=immersive] .hero .button{padding:11px 13px;font-size:12px;gap:15px}html[data-mode=immersive] .hero-links{font-size:11px;gap:19px}html[data-mode=immersive] .hero-portrait picture{inset:42px -24% -70px}html[data-mode=immersive] .hero-foot{gap:18px;padding:19px 0 21px}html[data-mode=immersive] .hero-foot>span{max-width:270px}html[data-mode=immersive] .hero-foot>button{max-width:220px;text-align:right;font-size:10px}}
+@media(max-width:650px){html[data-mode=immersive] .hero{grid-template-columns:minmax(0,1fr);margin-top:20px;padding:26px 23px 0;gap:25px;border-radius:16px}html[data-mode=immersive] .hero-copy h1{font-size:clamp(44px,12vw,58px);margin-top:20px;line-height:1.02}html[data-mode=immersive] .hero-copy>.eyebrow{font-size:8px;letter-spacing:.06em}html[data-mode=immersive] .hero-line{font-size:25px;margin-top:21px}html[data-mode=immersive] .hero-description{font-size:13px;margin-top:17px;max-width:100%}html[data-mode=immersive] .current-role{font-size:13px;margin-top:19px}html[data-mode=immersive] .current-role>span{font-size:11px}html[data-mode=immersive] .hero .button{padding:11px 13px;font-size:12px;gap:15px}html[data-mode=immersive] .hero-links{font-size:12px;gap:23px;margin-top:20px}html[data-mode=immersive] .hero-portrait{aspect-ratio:.95;min-height:0;max-height:none;border-radius:0}html[data-mode=immersive] .hero-portrait picture{inset:13px -17% -75px}html[data-mode=immersive] .hero-foot{grid-column:1;display:block;padding:19px 0 23px;margin-top:-12px}html[data-mode=immersive] .hero-foot>span{max-width:none;font-size:7px}html[data-mode=immersive] .hero-foot>button{margin-top:12px;max-width:none;width:100%;text-align:left;font-size:11px;display:flex;justify-content:space-between}html[data-mode=immersive] .planning-sheet{top:24%;left:0;width:45%}}
+@media(max-width:360px){html[data-mode=immersive] .hero{padding:23px 17px 0;column-gap:0}html[data-mode=immersive] .hero-copy h1{font-size:42px}html[data-mode=immersive] .hero-line{font-size:23px}html[data-mode=immersive] .hero .button{padding:10px 11px;font-size:11px;gap:13px}html[data-mode=immersive] .hero-copy>.eyebrow{font-size:7px}html[data-mode=immersive] .hero-portrait{aspect-ratio:.9}html[data-mode=immersive] .hero-portrait picture{inset:12px -22% -60px}}
+@media print{html[data-mode=immersive] .hero{display:block;background:white;border:0;padding:0;margin:0}html[data-mode=immersive] .hero-portrait{display:none}}
+/* The portrait meets the panel edge; no divider or empty footer strip beneath it. */
+html[data-mode=immersive] .hero{row-gap:0}
+html[data-mode=immersive] .hero-copy{padding-bottom:30px}
+html[data-mode=immersive] .hero-foot{display:none}
+html[data-mode=immersive] .hero-portrait{border-radius:0;overflow:visible}
+html[data-mode=immersive] .hero-portrait picture{inset:22px -8% -160px}
+.fintech-sheet{position:absolute;left:1%;bottom:4%;width:46%;color:#66898b;opacity:.27;transform:rotate(-5deg);z-index:1;pointer-events:none}.fintech-sheet svg{display:block;width:100%;height:auto}
+html[data-mode=immersive] .planning-sheet{top:22%;opacity:.25}
+@media(max-width:950px){html[data-mode=immersive] .hero-portrait picture{inset:40px -24% -130px}.fintech-sheet{bottom:5%;width:50%}}
+@media(max-width:650px){html[data-mode=immersive] .hero{gap:18px}html[data-mode=immersive] .hero-copy{padding-bottom:0}html[data-mode=immersive] .hero-portrait picture{inset:13px -17% -105px}.fintech-sheet{bottom:4%;width:48%}}
+@media(max-width:360px){html[data-mode=immersive] .hero-portrait picture{inset:12px -22% -95px}}
+
+/* AI-assisted sleeve extension, framed to keep the original head scale. */
+html[data-mode=immersive] .hero-portrait picture{inset:28px -12% -260px}
+@media(max-width:950px){html[data-mode=immersive] .hero-portrait picture{inset:38px -25% -215px}}
+@media(max-width:650px){html[data-mode=immersive] .hero-portrait picture{inset:15px -21% -160px}}
+@media(max-width:360px){html[data-mode=immersive] .hero-portrait picture{inset:14px -25% -150px}}
+
+.hero-focus{font-size:10px;color:#617c87;letter-spacing:.025em;margin-top:14px}html[data-mode=quick] .hero-focus{font-size:10px;max-width:300px}
+@media(max-width:650px){.hero-focus{font-size:9px;line-height:1.8}}
