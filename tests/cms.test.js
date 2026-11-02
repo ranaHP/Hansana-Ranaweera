@@ -9,3 +9,26 @@ test('draft → publish, stale updates and restore, backed by MongoDB',async()=>
 test('server rejects unsafe layout, URLs and invalid hero sizes',async()=>{const d=(await agent.get('/api/admin/site')).body;d.site.hero.nameSize=500;const bad=await agent.put('/api/admin/site').set('X-CSRF-Token',csrf).send({site:d.site,expectedVersion:d.draftVersion});assert.equal(bad.status,400);let site=(await agent.get('/api/admin/site')).body.site;assert.equal(SiteSchema.safeParse({...site,profile:{...site.profile,github:'javascript:alert(1)'}}).success,false);site.document.push({type:'element',tag:'script',attrs:{},children:[]});assert.equal(SiteSchema.safeParse(site).success,false);site.document.pop();site.document.push({type:'element',tag:'img',attrs:{src:'/x.png',onerror:'alert(1)'},children:[]});assert.equal(SiteSchema.safeParse(site).success,false);});
 test('real image upload, MIME validation, library and reversible archive',async()=>{const fake=await agent.post('/api/admin/media').set('X-CSRF-Token',csrf).attach('file',Buffer.from('<script>bad</script>'),'photo.png');assert.equal(fake.status,400);const png=await readFile(new URL('../frontend/public/assets/certificates/certificate-screenshot-a.png',import.meta.url));const upload=await agent.post('/api/admin/media').set('X-CSRF-Token',csrf).attach('file',png,'completion.png');assert.equal(upload.status,201);const m=upload.body.media;assert.match(m.url,/^\/uploads\/[\w-]+\.png$/);assert.equal((await request(app).get(m.url)).status,200);const archive=await agent.patch('/api/admin/media/'+m._id).set('X-CSRF-Token',csrf).send({archived:true});assert.equal(archive.body.media.archived,true);assert.equal((await agent.get('/api/admin/media')).body.media.some(v=>v._id===m._id),true);assert.equal((await request(app).get(m.url)).status,200);});
 test('annual themes respect dates, timezone, override and year wrapping',async()=>{const site=JSON.parse(await readFile(new URL('../seed/site.json',import.meta.url),'utf8'));const a=site.appearance;a.schedule.enabled=true;assert.equal(resolveTheme(a,new Date('2026-10-31T12:00:00Z')).preset,'halloween');assert.equal(resolveTheme(a,new Date('2026-12-24T12:00:00Z')).preset,'christmas');assert.equal(resolveTheme(a,new Date('2026-07-01T12:00:00Z')).preset,'original');a.schedule.rules=[{id:'winter',theme:'christmas',start:'12-20',end:'01-05',enabled:true}];assert.equal(resolveTheme(a,new Date('2027-01-02T12:00:00Z')).preset,'christmas');a.schedule.enabled=false;a.preset='halloween';assert.equal(resolveTheme(a,new Date('2026-07-01T12:00:00Z')).preset,'halloween');});
+
+test('single live Halloween toggle preserves drafts, restores themes, and rejects stale or unauthenticated updates',async()=>{
+ await store.Site.updateOne({_id:'main'},{$set:{'published.appearance.preset':'christmas','published.appearance.seasonalDecor':false,'published.appearance.animations':false,'draft.appearance.preset':'custom','draft.appearance.seasonalDecor':false,'draft.appearance.schedule.enabled':true,'draft.profile.firstName':'Unpublished draft name'}});
+ const before=(await agent.get('/api/admin/site')).body;
+ const body={enabled:true,expectedVersion:before.draftVersion,expectedRevision:before.revision};
+ assert.equal(before.halloweenEnabled,false);
+ assert.equal((await request(app).patch('/api/admin/halloween').send(body)).status,401);
+ assert.equal((await agent.patch('/api/admin/halloween').send(body)).status,403);
+ assert.equal((await agent.patch('/api/admin/halloween').set('X-CSRF-Token',csrf).send({...body,enabled:'yes'})).status,400);
+ const on=await agent.patch('/api/admin/halloween').set('X-CSRF-Token',csrf).send(body);
+ assert.equal(on.status,200);assert.equal(on.body.halloweenEnabled,true);
+ const live=(await request(app).get('/api/site')).body.site;
+ assert.equal(live.appearance.preset,'halloween');assert.equal(live.appearance.seasonalDecor,true);assert.equal(live.appearance.animations,false);
+ assert.equal(live.profile.firstName,'Hansana');
+ const draft=(await agent.get('/api/admin/site')).body;
+ assert.equal(draft.site.profile.firstName,'Unpublished draft name');assert.equal(draft.halloweenEnabled,true);assert.equal(draft.site.appearance.schedule.enabled,false);
+ assert.equal((await agent.patch('/api/admin/halloween').set('X-CSRF-Token',csrf).send(body)).status,409);
+ const off=await agent.patch('/api/admin/halloween').set('X-CSRF-Token',csrf).send({enabled:false,expectedVersion:on.body.draftVersion,expectedRevision:on.body.revision});
+ assert.equal(off.status,200);assert.equal(off.body.halloweenEnabled,false);assert.equal(off.body.appearance.preset,'custom');assert.equal(off.body.appearance.seasonalDecor,false);
+ const restored=(await request(app).get('/api/site')).body.site;
+ assert.equal(restored.appearance.preset,'christmas');assert.equal(restored.appearance.seasonalDecor,false);assert.equal(restored.appearance.schedule.enabled,false);assert.equal(restored.profile.firstName,'Hansana');
+ assert.ok((await agent.get('/api/admin/history')).body.history.some(v=>v.revision===off.body.revision));
+});

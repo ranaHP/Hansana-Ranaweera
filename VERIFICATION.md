@@ -40,3 +40,7 @@ Added locally authored SVG scenery, a moon, bats, pumpkins, animated aurora/fog/
 ## Interactive Halloween — 2 November 2026
 
 Production build passed. Browser checks confirmed the loaded AI monster image, aligned face hotspot, reveal/restoration, Escape behavior, pause/resume freezing both bat and lantern animations, and 390px mobile layout without horizontal overflow. Desktop uses four page-wide flying bats, mobile uses two. All decorative layers are pointer-transparent; the portrait hotspot and pause control are the only interactive additions. CSS disables ambient motion for reduced-motion and Appearance settings. No draft/published content was changed during preview.
+
+## Single-toggle admin branch — 2 November 2026
+
+Branch `feature/admin-halloween-toggle` adds an authenticated/CSRF-protected, atomic theme-only update. Seven MongoDB test groups passed, including preserving unpublished draft data, restoring different draft/live presets, respecting the motion preference, retaining history, rejecting malformed/unauthenticated/stale requests and disabling date overrides for explicit manual decisions. Browser checks on isolated ports 4001/5174 verified On → public Halloween, Off → original theme, preservation of an unsaved profile field, no publication of that field, and old public `theme=halloween` URLs following the admin setting. The original preview and its login cookie were left untouched. `SETUP.md` documents the complete non-Docker setup and production requirements.

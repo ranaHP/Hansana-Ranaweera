@@ -38,3 +38,9 @@ All endpoints require the session cookie. All writes also require the CSRF heade
 The shared schema is in `shared/schema.js`. It constrains hero numeric ranges, colors, URLs, unique collection IDs, permitted layout tags/attributes and total JSON size. No scripts, event handler attributes or arbitrary HTML execution are accepted.
 
 MongoDB collections: `admins`, `sessions` (TTL expiry), `sites` (single `main` document), `media`. Draft saves use compare-and-swap on `draftVersion`. Publication checks draft version and prior public revision atomically, stores the validated snapshot and appends history. Data is single-site; content changes do not modify credentials or database connection settings.
+
+## Single-switch live Halloween control
+
+`PATCH /api/admin/halloween` requires the admin session, CSRF token and `{enabled:boolean,expectedVersion:number,expectedRevision:number}`. It atomically changes only preset/decor/manual-schedule fields in the published and saved draft copies, increments both versions, keeps a published revision snapshot and notifies public tabs. It never publishes unrelated draft content. On disable, each copy restores its own preceding non-Halloween preset and decoration preference. Global animation and reduced-motion preferences are respected. Annual scheduling is disabled for an explicit manual on/off decision.
+
+`GET /api/admin/site`, publish and Halloween update responses include `halloweenEnabled`, based on the effective published theme. Changes use optimistic version checks; stale updates return 409. Optional `SESSION_COOKIE_NAME` isolates simultaneous local checkouts without changing authentication security.

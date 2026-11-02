@@ -7,7 +7,7 @@ export async function hashPassword(password){const salt=randomBytes(16).toString
 export async function verifyPassword(password,hash){const [,salt,expected]=hash?.split('$')||[];if(!salt||!expected)return false;try{const actual=await scrypt(password,salt,64);const bytes=Buffer.from(expected,'hex');return bytes.length===actual.length&&timingSafeEqual(bytes,actual);}catch{return false;}}
 export function constantEqual(a,b){if(typeof a!=='string'||typeof b!=='string')return false;const x=Buffer.from(a),y=Buffer.from(b);return x.length===y.length&&timingSafeEqual(x,y);}
 export function securityMiddleware(store,config){
- const cookieName='portfolio.sid';
+ const cookieName=config.cookieName||'portfolio.sid';
  const cookieOptions={httpOnly:true,sameSite:'strict',secure:config.cookieSecure,path:'/',maxAge:config.sessionHours*3600000};
  const auth=async(req,res,next)=>{try{const token=req.cookies[cookieName];if(!token||token.length>200)return res.status(401).json({error:'Please sign in.'});const session=await store.Session.findOne({tokenHash:tokenHash(token),expiresAt:{$gt:new Date()}}).populate('admin').lean();if(!session?.admin){res.clearCookie(cookieName,{...cookieOptions,maxAge:undefined});return res.status(401).json({error:'Session expired. Please sign in.'});}req.session=session;req.admin=session.admin;next();}catch(e){next(e);}};
  const origin=(req,res,next)=>{const value=req.get('origin');if(value&&!config.origins.includes(value))return res.status(403).json({error:'This request origin is not allowed.'});next();};

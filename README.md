@@ -3,6 +3,8 @@
 A complete React, Express/Node.js and MongoDB portfolio project. The existing Systems Garden design, portraits, animated tech icons, original completion images and interactive Three.js world are retained. The public website reads published content from MongoDB. `/admin` is a separate authenticated React dashboard.
 
 
+**Start here: [complete configuration guide](SETUP.md).** This branch adds an immediate, single-switch Halloween control to the admin.
+
 ## Repository structure
 
 One repository, separate npm workspaces:
@@ -146,9 +148,9 @@ Validation performed: production build; six MongoDB integration/theme test group
 
 ## Halloween atmosphere
 
-Select Halloween in Admin > Overview or Themes & appearance, then save, preview and publish. The theme includes a moonlit SVG landscape, floating bats, lantern pumpkins, drifting violet/amber light, fireflies and themed project cards. Animations and seasonal decorations can be disabled independently in the existing Appearance controls; system reduced-motion preferences are respected.
+Use the **Halloween mode** switch in Admin to apply Halloween immediately. It updates only the live theme settings; unrelated draft edits stay private. Turning it off restores the previous non-Halloween preset. Manual switching disables the annual schedule; it can be re-enabled under Themes & appearance. The theme includes a moonlit SVG landscape, floating bats, lantern pumpkins, drifting violet/amber light, fireflies and themed project cards. Animations and seasonal decorations can be disabled independently in the existing Appearance controls; system reduced-motion preferences are respected.
 
-Open `/?mode=immersive&theme=halloween` for a visual preview without changing saved content. `theme=original` and `theme=christmas` are also supported; removing the query restores the published theme and schedule.
+For an authenticated draft preview use `/?preview=1&mode=immersive&theme=halloween`. Theme query overrides apply only to draft previews. Public URLs always follow the published admin settings, including old links containing `theme=halloween`.
 
 ### Interactive Halloween edition
 
