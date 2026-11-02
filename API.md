@@ -41,6 +41,10 @@ MongoDB collections: `admins`, `sessions` (TTL expiry), `sites` (single `main` d
 
 ## Single-switch live Halloween control
 
-`PATCH /api/admin/halloween` requires the admin session, CSRF token and `{enabled:boolean,expectedVersion:number,expectedRevision:number}`. It atomically changes only preset/decor/manual-schedule fields in the published and saved draft copies, increments both versions, keeps a published revision snapshot and notifies public tabs. It never publishes unrelated draft content. On disable, each copy restores its own preceding non-Halloween preset and decoration preference. Global animation and reduced-motion preferences are respected. Annual scheduling is disabled for an explicit manual on/off decision.
+`PATCH /api/admin/halloween` requires the admin session, CSRF token and `{enabled:boolean,expectedVersion:number,expectedRevision:number}`. It atomically changes only preset/decor/manual-schedule fields in the published and saved draft copies, increments both versions, keeps a published revision snapshot and notifies public tabs. It never publishes unrelated draft content. On disable, each copy restores its own preceding non-seasonal preset and decoration preference. Global animation and reduced-motion preferences are respected. Annual scheduling is disabled for an explicit manual on/off decision.
 
 `GET /api/admin/site`, publish and Halloween update responses include `halloweenEnabled`, based on the effective published theme. Changes use optimistic version checks; stale updates return 409. Optional `SESSION_COOKIE_NAME` isolates simultaneous local checkouts without changing authentication security.
+
+## Christmas and shared seasonal switching
+
+`PATCH /api/admin/christmas` accepts the same authenticated, CSRF-protected body as `/api/admin/halloween`. Both responses, admin-site loads and publish responses include `halloweenEnabled` and `christmasEnabled`. These are computed from one effective preset, so only one can be true. The shared seasonal update atomically preserves a non-seasonal restore point for both saved draft and published content. Turning either active mode off restores Original/Custom rather than reviving the other holiday. Existing Halloween restore metadata is accepted when it refers to a non-seasonal preset. Both routes retain version checks, snapshot history and theme-only publication.

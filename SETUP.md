@@ -1,6 +1,6 @@
 # Complete setup — React frontend, Node backend, MongoDB and admin
 
-Branch: **`feature/admin-halloween-toggle`**. This guide uses Node directly; Docker is optional and is not required for any step below.
+Branch: **`feature/admin-seasonal-themes`**. This guide uses Node directly; Docker is optional and is not required for any step below.
 
 ## 1. Prerequisites and download
 
@@ -9,7 +9,7 @@ Branch: **`feature/admin-halloween-toggle`**. This guide uses Node directly; Doc
 - Run commands from the repository root unless a step says otherwise.
 
 ```powershell
-git clone --branch feature/admin-halloween-toggle https://github.com/ranaHP/Hansana-Ranaweera.git
+git clone --branch feature/admin-seasonal-themes https://github.com/ranaHP/Hansana-Ranaweera.git
 cd Hansana-Ranaweera
 npm ci
 ```
@@ -18,7 +18,7 @@ For an existing clone:
 
 ```powershell
 git fetch origin
-git switch feature/admin-halloween-toggle
+git switch feature/admin-seasonal-themes
 git pull --ff-only
 npm ci
 ```
@@ -123,16 +123,16 @@ npm run dev:frontend
 
 React calls relative `/api/...` URLs. Vite proxies `/api` and `/uploads` to Express on port 4000. Express connects to MongoDB using `MONGODB_URI`. No additional frontend connection string is needed. An uploaded photo travels from the admin to Express; its metadata is stored in MongoDB and the file in `backend/uploads`.
 
-## 7. Use the single Halloween toggle
+## 7. Use the seasonal toggles
 
 1. Sign in to `/admin`.
-2. Find the **Halloween mode** switch near the top of the editor. It is available on every admin page.
-3. Switch **On** to apply Halloween to the public website immediately: palette, monster face reveal, bats, pumpkins, spiders, webs and ambient scenery.
-4. Switch **Off** to restore the preceding non-Halloween theme.
+2. Find **Halloween mode** and **Christmas mode** near the top of the editor. Both are available on every admin page.
+3. Switch **Halloween On** for the monster portrait, bats, pumpkins, spiders and webs, or **Christmas On** for your tech-Santa portrait, gifts, reindeer, snow and festive lights. Turning one on automatically turns the other off.
+4. Switch the active season **Off** to restore the preceding normal theme (Original or Custom). Switching between the two holidays retains this normal-theme restore point, so they cannot cycle back into each other.
 
 **No Save or Publish click is required for this switch.** The server updates only live theme settings and the corresponding saved draft settings. Other saved or unsaved draft content remains private. The animation preference is preserved; reduced-motion remains respected. Open public tabs receive the publication event and refresh their content.
 
-Manual switching disables automatic annual scheduling, so a date rule cannot turn Halloween back on after you explicitly turn it off. Re-enable the schedule under Themes & appearance when desired. Advanced theme cards continue to use the normal draft → preview → publish workflow.
+Manual switching disables automatic annual scheduling, so a date rule cannot turn a holiday back on after you explicitly turn it off. Re-enable the schedule under Themes & appearance when desired. Advanced theme cards continue to use the normal draft → preview → publish workflow.
 
 Public URLs always follow the admin setting. An old public link with `theme=halloween` cannot force Halloween back on. Signed-in draft previews can still use `/?preview=1&theme=halloween` without changing the public site.
 
@@ -192,3 +192,7 @@ The frontend proxy follows `PORT`; `BACKEND_URL` can override it if needed. The 
 | Admin says version conflict | Reload the saved draft after preserving your local changes. |
 | Halloween will not switch off | Open the normal public URL; public query overrides are ignored on this branch. Ensure both frontend and backend run this branch. |
 | Missing uploaded image after deployment | Restore the upload directory or use persistent/object storage; content JSON alone does not include images. |
+
+## Tech-Santa Christmas edition
+
+The Christmas switch applies the forest-green/gold palette, your AI-assisted tech-Santa portrait, illustrated gift boxes, reindeer, snowfall, evergreen scenery and softly glowing lights immediately. Halloween and Christmas are mutually exclusive. Off restores the previous Original/Custom preset; neither toggle publishes unrelated draft content. The Christmas Pause ambience button freezes festive motion; the Appearance animation/decor preferences and system reduced-motion settings remain respected.

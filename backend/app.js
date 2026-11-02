@@ -9,11 +9,12 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {z,ZodError} from 'zod';
 import {SiteSchema,CredentialsSchema,NewPassword} from '../shared/schema.js';
-import {saveDraft,publishDraft,toggleHalloween} from './store.js';
+import {saveDraft,publishDraft,toggleSeasonalTheme} from './store.js';
 import {resolveTheme} from '../shared/themes.js';
 import {hashPassword,verifyPassword,randomToken,tokenHash,securityMiddleware} from './security.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const versionSchema=z.object({expectedVersion:z.number().int().positive()}).strict();
+const seasonalStatus=site=>{const theme=resolveTheme(site.appearance).preset;return {halloweenEnabled:theme==='halloween',christmasEnabled:theme==='christmas'};};
 const conflict=res=>res.status(409).json({error:'A newer draft was saved in another window. Reload before saving.'});
 export async function createApp(store,options={}){
  const config={production:false,origins:['http://127.0.0.1:5173','http://localhost:5173','http://127.0.0.1:4000','http://localhost:4000'],cookieSecure:false,sessionHours:12,uploadsDir:path.join(root,'backend/uploads'),...options};
@@ -34,15 +35,15 @@ export async function createApp(store,options={}){
  app.get('/api/site',async(req,res)=>{const doc=await store.Site.findById('main').select('published publishedRevision publishedAt').lean();if(!doc)return res.status(503).json({error:'The website is being initialized.'});res.json({site:doc.published,revision:doc.publishedRevision,publishedAt:doc.publishedAt});});
  app.get('/api/site/stream',async(req,res)=>{res.set({'Content-Type':'text/event-stream','Cache-Control':'no-cache','Connection':'keep-alive','X-Accel-Buffering':'no'});res.flushHeaders();res.write('retry: 3000\n\n');streams.add(res);const timer=setInterval(()=>res.write(': keepalive\n\n'),25000);req.on('close',()=>{clearInterval(timer);streams.delete(res);});});
  app.use('/api/admin',s.auth,writeLimit,(req,res,next)=>['GET','HEAD'].includes(req.method)?next():s.csrf(req,res,next));
- app.get('/api/admin/site',async(req,res)=>{const doc=await store.Site.findById('main').lean();res.json({site:doc.draft,draftVersion:doc.draftVersion,revision:doc.publishedRevision,draftUpdatedAt:doc.draftUpdatedAt,publishedAt:doc.publishedAt,halloweenEnabled:resolveTheme(doc.published.appearance).preset==='halloween'});});
+ app.get('/api/admin/site',async(req,res)=>{const doc=await store.Site.findById('main').lean();res.json({site:doc.draft,draftVersion:doc.draftVersion,revision:doc.publishedRevision,draftUpdatedAt:doc.draftUpdatedAt,publishedAt:doc.publishedAt,...seasonalStatus(doc.published)});});
  app.put('/api/admin/site',async(req,res)=>{const body=z.object({site:SiteSchema,expectedVersion:z.number().int().positive()}).strict().parse(req.body);const saved=await saveDraft(store,body.site,body.expectedVersion);if(!saved)return conflict(res);res.json({site:saved.draft,draftVersion:saved.draftVersion,revision:saved.publishedRevision,draftUpdatedAt:saved.draftUpdatedAt});});
- app.post('/api/admin/publish',async(req,res)=>{const {expectedVersion}=versionSchema.parse(req.body);const saved=await publishDraft(store,expectedVersion,req.admin.email);if(!saved)return conflict(res);for(const stream of streams)stream.write(`data: ${JSON.stringify({revision:saved.publishedRevision})}\n\n`);res.json({revision:saved.publishedRevision,publishedAt:saved.publishedAt,halloweenEnabled:resolveTheme(saved.published.appearance).preset==='halloween'});});
- app.patch('/api/admin/halloween',async(req,res)=>{
+ app.post('/api/admin/publish',async(req,res)=>{const {expectedVersion}=versionSchema.parse(req.body);const saved=await publishDraft(store,expectedVersion,req.admin.email);if(!saved)return conflict(res);for(const stream of streams)stream.write(`data: ${JSON.stringify({revision:saved.publishedRevision})}\n\n`);res.json({revision:saved.publishedRevision,publishedAt:saved.publishedAt,...seasonalStatus(saved.published)});});
+ for(const theme of ['halloween','christmas'])app.patch('/api/admin/'+theme,async(req,res)=>{
   const body=z.object({enabled:z.boolean(),expectedVersion:z.number().int().positive(),expectedRevision:z.number().int().positive()}).strict().parse(req.body);
-  const saved=await toggleHalloween(store,body,req.admin.email);
+  const saved=await toggleSeasonalTheme(store,theme,body,req.admin.email);
   if(!saved)return conflict(res);
   for(const stream of streams)stream.write(`data: ${JSON.stringify({revision:saved.publishedRevision})}\n\n`);
-  res.json({appearance:saved.draft.appearance,draftVersion:saved.draftVersion,revision:saved.publishedRevision,publishedAt:saved.publishedAt,halloweenEnabled:resolveTheme(saved.published.appearance).preset==='halloween'});
+  res.json({appearance:saved.draft.appearance,draftVersion:saved.draftVersion,revision:saved.publishedRevision,publishedAt:saved.publishedAt,...seasonalStatus(saved.published)});
  });
  app.get('/api/admin/history',async(req,res)=>{const doc=await store.Site.findById('main').select('history').lean();res.json({history:doc.history.map(({revision,createdAt,actor})=>({revision,createdAt,actor})).reverse()});});
  app.post('/api/admin/restore',async(req,res)=>{const {revision,expectedVersion}=z.object({revision:z.number().int().positive(),expectedVersion:z.number().int().positive()}).strict().parse(req.body);const doc=await store.Site.findById('main').lean();const snapshot=doc.history.find(h=>h.revision===revision);if(!snapshot)return res.status(404).json({error:'Revision is no longer retained.'});const saved=await saveDraft(store,snapshot.content,expectedVersion);if(!saved)return conflict(res);res.json({site:saved.draft,draftVersion:saved.draftVersion,revision:saved.publishedRevision});});

@@ -11,7 +11,7 @@ test('real image upload, MIME validation, library and reversible archive',async(
 test('annual themes respect dates, timezone, override and year wrapping',async()=>{const site=JSON.parse(await readFile(new URL('../seed/site.json',import.meta.url),'utf8'));const a=site.appearance;a.schedule.enabled=true;assert.equal(resolveTheme(a,new Date('2026-10-31T12:00:00Z')).preset,'halloween');assert.equal(resolveTheme(a,new Date('2026-12-24T12:00:00Z')).preset,'christmas');assert.equal(resolveTheme(a,new Date('2026-07-01T12:00:00Z')).preset,'original');a.schedule.rules=[{id:'winter',theme:'christmas',start:'12-20',end:'01-05',enabled:true}];assert.equal(resolveTheme(a,new Date('2027-01-02T12:00:00Z')).preset,'christmas');a.schedule.enabled=false;a.preset='halloween';assert.equal(resolveTheme(a,new Date('2026-07-01T12:00:00Z')).preset,'halloween');});
 
 test('single live Halloween toggle preserves drafts, restores themes, and rejects stale or unauthenticated updates',async()=>{
- await store.Site.updateOne({_id:'main'},{$set:{'published.appearance.preset':'christmas','published.appearance.seasonalDecor':false,'published.appearance.animations':false,'draft.appearance.preset':'custom','draft.appearance.seasonalDecor':false,'draft.appearance.schedule.enabled':true,'draft.profile.firstName':'Unpublished draft name'}});
+ await store.Site.updateOne({_id:'main'},{$set:{'published.appearance.preset':'original','published.appearance.seasonalDecor':false,'published.appearance.animations':false,'draft.appearance.preset':'custom','draft.appearance.seasonalDecor':false,'draft.appearance.schedule.enabled':true,'draft.profile.firstName':'Unpublished draft name'}});
  const before=(await agent.get('/api/admin/site')).body;
  const body={enabled:true,expectedVersion:before.draftVersion,expectedRevision:before.revision};
  assert.equal(before.halloweenEnabled,false);
@@ -29,6 +29,25 @@ test('single live Halloween toggle preserves drafts, restores themes, and reject
  const off=await agent.patch('/api/admin/halloween').set('X-CSRF-Token',csrf).send({enabled:false,expectedVersion:on.body.draftVersion,expectedRevision:on.body.revision});
  assert.equal(off.status,200);assert.equal(off.body.halloweenEnabled,false);assert.equal(off.body.appearance.preset,'custom');assert.equal(off.body.appearance.seasonalDecor,false);
  const restored=(await request(app).get('/api/site')).body.site;
- assert.equal(restored.appearance.preset,'christmas');assert.equal(restored.appearance.seasonalDecor,false);assert.equal(restored.appearance.schedule.enabled,false);assert.equal(restored.profile.firstName,'Hansana');
+ assert.equal(restored.appearance.preset,'original');assert.equal(restored.appearance.seasonalDecor,false);assert.equal(restored.appearance.schedule.enabled,false);assert.equal(restored.profile.firstName,'Hansana');
  assert.ok((await agent.get('/api/admin/history')).body.history.some(v=>v.revision===off.body.revision));
+});
+
+test('Christmas toggle enables tech-Santa mode, excludes Halloween, and returns to the normal theme',async()=>{
+ const before=(await agent.get('/api/admin/site')).body;
+ const body={enabled:true,expectedVersion:before.draftVersion,expectedRevision:before.revision};
+ assert.equal((await request(app).patch('/api/admin/christmas').send(body)).status,401);
+ const on=await agent.patch('/api/admin/christmas').set('X-CSRF-Token',csrf).send(body);
+ assert.equal(on.status,200);assert.equal(on.body.christmasEnabled,true);assert.equal(on.body.halloweenEnabled,false);
+ const live=(await request(app).get('/api/site')).body.site;
+ assert.equal(live.appearance.preset,'christmas');assert.equal(live.appearance.seasonalDecor,true);assert.equal(live.profile.firstName,'Hansana');
+ assert.equal((await agent.get('/api/admin/site')).body.site.profile.firstName,'Unpublished draft name');
+ const halloween=await agent.patch('/api/admin/halloween').set('X-CSRF-Token',csrf).send({enabled:true,expectedVersion:on.body.draftVersion,expectedRevision:on.body.revision});
+ assert.equal(halloween.status,200);assert.equal(halloween.body.halloweenEnabled,true);assert.equal(halloween.body.christmasEnabled,false);
+ const off=await agent.patch('/api/admin/halloween').set('X-CSRF-Token',csrf).send({enabled:false,expectedVersion:halloween.body.draftVersion,expectedRevision:halloween.body.revision});
+ assert.equal(off.status,200);assert.equal(off.body.christmasEnabled,false);assert.equal(off.body.halloweenEnabled,false);
+ assert.equal((await request(app).get('/api/site')).body.site.appearance.preset,'original');
+ const again=await agent.patch('/api/admin/christmas').set('X-CSRF-Token',csrf).send({enabled:true,expectedVersion:off.body.draftVersion,expectedRevision:off.body.revision});
+ const stop=await agent.patch('/api/admin/christmas').set('X-CSRF-Token',csrf).send({enabled:false,expectedVersion:again.body.draftVersion,expectedRevision:again.body.revision});
+ assert.equal(stop.status,200);assert.equal(stop.body.christmasEnabled,false);assert.equal(stop.body.halloweenEnabled,false);assert.equal(stop.body.appearance.preset,'custom');
 });

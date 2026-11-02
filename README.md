@@ -3,7 +3,7 @@
 A complete React, Express/Node.js and MongoDB portfolio project. The existing Systems Garden design, portraits, animated tech icons, original completion images and interactive Three.js world are retained. The public website reads published content from MongoDB. `/admin` is a separate authenticated React dashboard.
 
 
-**Start here: [complete configuration guide](SETUP.md).** This branch adds an immediate, single-switch Halloween control to the admin.
+**Start here: [complete configuration guide](SETUP.md).** This branch adds an immediate, one-click Halloween and Christmas controls to the admin.
 
 ## Repository structure
 
@@ -148,7 +148,7 @@ Validation performed: production build; six MongoDB integration/theme test group
 
 ## Halloween atmosphere
 
-Use the **Halloween mode** switch in Admin to apply Halloween immediately. It updates only the live theme settings; unrelated draft edits stay private. Turning it off restores the previous non-Halloween preset. Manual switching disables the annual schedule; it can be re-enabled under Themes & appearance. The theme includes a moonlit SVG landscape, floating bats, lantern pumpkins, drifting violet/amber light, fireflies and themed project cards. Animations and seasonal decorations can be disabled independently in the existing Appearance controls; system reduced-motion preferences are respected.
+Use the **Halloween mode** switch in Admin to apply Halloween immediately. It updates only the live theme settings; unrelated draft edits stay private. Turning it off restores the previous non-seasonal preset. Manual switching disables the annual schedule; it can be re-enabled under Themes & appearance. The theme includes a moonlit SVG landscape, floating bats, lantern pumpkins, drifting violet/amber light, fireflies and themed project cards. Animations and seasonal decorations can be disabled independently in the existing Appearance controls; system reduced-motion preferences are respected.
 
 For an authenticated draft preview use `/?preview=1&mode=immersive&theme=halloween`. Theme query overrides apply only to draft previews. Public URLs always follow the published admin settings, including old links containing `theme=halloween`.
 
@@ -157,3 +157,7 @@ For an authenticated draft preview use `/?preview=1&mode=immersive&theme=hallowe
 Hover over the portrait's face for its AI-assisted monster alternate; leaving the face restores the normal photo. On touch devices tap the face to toggle. Keyboard focus also reveals it, and Escape restores the original. The hotspot is measured against the actual portrait and follows admin sizing/position changes.
 
 Page-wide bats, gently dimming edge lanterns, corner webs and hanging spiders are decorative and do not intercept clicks. Pause ambience freezes the seasonal motion independently of the 3D world. The Appearance animation/decor controls and system reduced-motion preferences remain supported. Smaller screens use fewer bats and lanterns. Quick mode does not load the monster portrait.
+
+## Tech-Santa Christmas edition
+
+The Christmas switch applies the forest-green/gold palette, your AI-assisted tech-Santa portrait, illustrated gift boxes, reindeer, snowfall, evergreen scenery and softly glowing lights immediately. Halloween and Christmas are mutually exclusive. Off restores the previous Original/Custom preset; neither toggle publishes unrelated draft content. The Christmas Pause ambience button freezes festive motion; the Appearance animation/decor preferences and system reduced-motion settings remain respected.

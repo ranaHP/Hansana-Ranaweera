@@ -11,3 +11,5 @@ No employer source code, private infrastructure topology, client data or claimed
 Halloween scenery in `frontend/public/assets/seasonal` consists of original SVG illustrations authored for this project. It uses no remote image service.
 
 `frontend/public/assets/seasonal/hansana-monster.png` is an AI-assisted, non-gory Halloween transformation of the supplied portrait, generated on 2 November 2026 for the face interaction. The normal portrait is preserved. Webs, spiders and flying bats are original SVG/CSS artwork.
+
+`frontend/public/assets/seasonal/hansana-tech-santa.png` is an AI-assisted Christmas costume edit of the supplied portrait, generated on 2 November 2026. The original face remains recognizable; the original portrait is preserved. Winter scenery, gifts and reindeer use original SVG/CSS artwork.
