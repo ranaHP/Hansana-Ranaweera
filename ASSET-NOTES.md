@@ -9,3 +9,5 @@ Issuer and technology logos identify their respective organizations and tools. T
 No employer source code, private infrastructure topology, client data or claimed production metrics are included.
 
 Halloween scenery in `frontend/public/assets/seasonal` consists of original SVG illustrations authored for this project. It uses no remote image service.
+
+`frontend/public/assets/seasonal/hansana-monster.png` is an AI-assisted, non-gory Halloween transformation of the supplied portrait, generated on 2 November 2026 for the face interaction. The normal portrait is preserved. Webs, spiders and flying bats are original SVG/CSS artwork.

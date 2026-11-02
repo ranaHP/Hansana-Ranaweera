@@ -36,3 +36,7 @@ Migrated into `frontend`, `backend` and `shared` npm workspaces. Dependencies ar
 ## Enhanced Halloween mode
 
 Added locally authored SVG scenery, a moon, bats, pumpkins, animated aurora/fog/fireflies and coordinated dark project-card colors. Desktop and 390px mobile previews were inspected; all scenery assets loaded and neither view had horizontal overflow. Mobile uses fewer fireflies. Existing motion/decor switches and system reduced-motion CSS cover the atmosphere. The temporary `theme=halloween` URL preview does not write to MongoDB; unsaved admin edits were confirmed intact during preview.
+
+## Interactive Halloween — 2 November 2026
+
+Production build passed. Browser checks confirmed the loaded AI monster image, aligned face hotspot, reveal/restoration, Escape behavior, pause/resume freezing both bat and lantern animations, and 390px mobile layout without horizontal overflow. Desktop uses four page-wide flying bats, mobile uses two. All decorative layers are pointer-transparent; the portrait hotspot and pause control are the only interactive additions. CSS disables ambient motion for reduced-motion and Appearance settings. No draft/published content was changed during preview.

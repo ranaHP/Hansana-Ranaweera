@@ -149,3 +149,9 @@ Validation performed: production build; six MongoDB integration/theme test group
 Select Halloween in Admin > Overview or Themes & appearance, then save, preview and publish. The theme includes a moonlit SVG landscape, floating bats, lantern pumpkins, drifting violet/amber light, fireflies and themed project cards. Animations and seasonal decorations can be disabled independently in the existing Appearance controls; system reduced-motion preferences are respected.
 
 Open `/?mode=immersive&theme=halloween` for a visual preview without changing saved content. `theme=original` and `theme=christmas` are also supported; removing the query restores the published theme and schedule.
+
+### Interactive Halloween edition
+
+Hover over the portrait's face for its AI-assisted monster alternate; leaving the face restores the normal photo. On touch devices tap the face to toggle. Keyboard focus also reveals it, and Escape restores the original. The hotspot is measured against the actual portrait and follows admin sizing/position changes.
+
+Page-wide bats, gently dimming edge lanterns, corner webs and hanging spiders are decorative and do not intercept clicks. Pause ambience freezes the seasonal motion independently of the 3D world. The Appearance animation/decor controls and system reduced-motion preferences remain supported. Smaller screens use fewer bats and lanterns. Quick mode does not load the monster portrait.

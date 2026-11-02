@@ -78,3 +78,39 @@ html[data-theme=halloween] .work-art .mini-system i:nth-child(3){background:#efa
 html[data-theme=halloween] .cms-portfolio .world-controls{background:#251d32eb;border-color:#685074}
 html[data-theme=halloween] .cms-portfolio .world-controls [aria-pressed=true]{background:#e5a16a;color:#211525}
 html[data-theme=halloween] .world-topline,html[data-theme=halloween] .world-label{color:#e3ccdf}
+/* Face interaction stays in the portrait; edge scenery never intercepts links. */
+html[data-theme=halloween] .cms-portfolio .hero-portrait .monster-normal{transition:opacity .28s ease}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .monster-normal[data-revealed=true]{opacity:0}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .monster-alternate{z-index:4;opacity:0;pointer-events:none;transition:opacity .28s ease;filter:drop-shadow(0 0 20px #aac38424)}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .monster-alternate[data-revealed=true]{opacity:1}
+html[data-theme=halloween] .cms-portfolio .hero-portrait .monster-alternate img{width:100%;height:100%;object-fit:contain;object-position:center top}
+.monster-face-trigger{position:absolute;z-index:7;pointer-events:auto;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:48%;padding:0;cursor:crosshair;-webkit-tap-highlight-color:transparent}
+.monster-face-trigger:focus-visible{outline:1px dashed #f6c494;outline-offset:6px}
+.monster-invitation{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;white-space:nowrap;background:#231729d9;border:1px solid #b38b6570;border-radius:20px;padding:5px 10px;color:#edcbb2;font:9px/1.4 'Segoe UI',sans-serif;letter-spacing:.04em;transition:opacity .18s}
+.monster-invitation i{font-size:13px;font-style:normal;color:#f6b373}.monster-invitation[data-revealed=true]{opacity:0}.monster-touch-copy{display:none}
+.halloween-haunts{position:fixed;inset:78px 0 0;z-index:20;overflow:hidden;pointer-events:none;contain:layout paint}
+.haunt-web{position:absolute;color:#ceb4db;opacity:.2;pointer-events:none;width:155px;height:155px}.haunt-web svg{display:block;width:100%;height:100%}
+.web-northwest{left:0;top:0}.web-northeast{right:0;top:0;transform:scaleX(-1);width:190px;height:190px;opacity:.24}.web-southwest{left:0;bottom:0;transform:rotate(-90deg);width:125px;height:125px;opacity:.17}
+.sky-bat{position:absolute;left:0;top:0;width:40px;color:#b9a3cf;opacity:.48;will-change:transform;animation:bat-sky-east 25s linear infinite;filter:drop-shadow(0 2px 4px #09070e40)}
+.sky-bat svg{display:block;width:100%;height:auto;overflow:visible}.bat-wing{transform-box:fill-box;animation:bat-wingbeat .65s ease-in-out infinite alternate}.wing-left{transform-origin:right center}.wing-right{transform-origin:left center;animation-delay:-.3s}
+.sky-bat-0{animation-delay:-6s;width:35px}.sky-bat-1{animation:bat-sky-west 29s linear infinite;animation-delay:-18s;width:26px;opacity:.32}.sky-bat-2{animation-delay:-19s;animation-duration:34s;width:45px;opacity:.35}.sky-bat-3{animation:bat-sky-west 37s linear infinite;animation-delay:-3s;width:23px;opacity:.27}
+.edge-lantern{position:absolute;width:50px;isolation:isolate;animation:lantern-dim 6s ease-in-out infinite;pointer-events:none}.edge-lantern img{display:block;width:100%;height:auto;filter:drop-shadow(0 0 12px #efac4c30)}
+.edge-lantern>span{position:absolute;inset:-30%;z-index:-1;background:radial-gradient(ellipse,#ef9e4c35,transparent 67%);border-radius:50%;animation:lantern-glow 6s ease-in-out infinite}
+.edge-lantern-0{right:12px;bottom:19%;transform:rotate(9deg);animation-delay:-2s}.edge-lantern-1{left:8px;bottom:9%;width:39px;transform:rotate(-8deg);animation-duration:8s}.edge-lantern-2{right:10px;top:26%;width:32px;transform:rotate(-6deg);animation-delay:-4s;opacity:.75}
+.spider-dangle{position:absolute;right:38px;top:118px;width:25px;height:32px;color:#ac8ebc;animation:spider-drop 22s ease-in-out infinite;will-change:transform;opacity:.8}.spider-dangle svg{display:block;width:100%;height:100%;overflow:visible}.spider-thread{position:absolute;bottom:90%;left:50%;height:400px;width:1px;background:linear-gradient(transparent,#baa2ca70)}
+.spider-dangle-small{left:28px;right:auto;top:44%;width:19px;height:25px;opacity:.5;animation-delay:-11s;animation-duration:29s}.spider-legs{transform-origin:center;animation:spider-twitch 8s ease-in-out infinite}
+.haunt-motion-control{position:fixed;bottom:18px;right:18px;z-index:31;display:flex;gap:7px;align-items:center;padding:8px 12px;border:1px solid #6c4b6f;border-radius:20px;background:#20152be8;backdrop-filter:blur(8px);color:#d3bbd9;font:10px/1.4 'Segoe UI',sans-serif;box-shadow:0 5px 20px #08030d25}.haunt-motion-control:hover{border-color:#c49176;color:#fff1df}.haunt-motion-control:disabled{opacity:.6;cursor:default}
+html[data-haunt-motion=paused] .halloween-atmosphere *,html[data-haunt-motion=paused] .halloween-haunts *,html[data-haunt-motion=paused] .halloween-portrait-scene *{animation-play-state:paused!important}
+@keyframes bat-wingbeat{to{transform:scaleX(.55) scaleY(.78)}}
+@keyframes bat-sky-east{0%{transform:translate3d(-12vw,21vh,0) rotate(-12deg)}22%{transform:translate3d(18vw,12vh,0) rotate(8deg)}48%{transform:translate3d(49vw,30vh,0) rotate(-5deg)}73%{transform:translate3d(83vw,18vh,0) rotate(10deg)}100%{transform:translate3d(115vw,27vh,0) rotate(-12deg)}}
+@keyframes bat-sky-west{0%{transform:translate3d(113vw,52vh,0) rotate(8deg)}25%{transform:translate3d(78vw,36vh,0) rotate(-8deg)}52%{transform:translate3d(48vw,61vh,0) rotate(4deg)}76%{transform:translate3d(17vw,45vh,0) rotate(-10deg)}100%{transform:translate3d(-15vw,58vh,0) rotate(6deg)}}
+@keyframes lantern-dim{0%,100%{filter:brightness(.66);opacity:.58}35%,56%{filter:brightness(1.13);opacity:.95}75%{filter:brightness(.83);opacity:.75}}
+@keyframes lantern-glow{0%,100%{opacity:.25;transform:scale(.85)}45%{opacity:.9;transform:scale(1.12)}}
+@keyframes spider-drop{0%,100%{transform:translate3d(0,-48px,0) rotate(-5deg)}40%,65%{transform:translate3d(-8px,65px,0) rotate(6deg)}}
+@keyframes spider-twitch{0%,40%,100%{transform:scaleX(1)}46%,54%{transform:scaleX(.88)}}
+@media(hover:none){.monster-hover-copy{display:none}.monster-touch-copy{display:inline}.monster-face-trigger{cursor:pointer}}
+@media(max-width:650px){.halloween-haunts{top:62px}.haunt-web{width:90px;height:90px}.web-northeast{width:108px;height:108px}.web-southwest{width:75px;height:75px}.sky-bat-2,.sky-bat-3,.edge-lantern-2,.spider-dangle-small{display:none}.edge-lantern-0{width:35px;right:3px;bottom:24%}.edge-lantern-1{width:27px;left:1px;bottom:10%}.spider-dangle{right:16px;width:19px;height:25px}.haunt-motion-control{bottom:78px;right:12px;width:35px;height:35px;padding:0;justify-content:center}.haunt-control-label{display:none}.monster-invitation{font-size:8px;padding:4px 8px;bottom:-13px}}
+@media(prefers-reduced-motion:reduce){.halloween-haunts *{animation:none!important;will-change:auto}.sky-bat{display:none}.edge-lantern{opacity:.65}.haunt-motion-control{display:none}.monster-normal,.monster-alternate{transition:none!important}}
+html[data-motion=off] .monster-normal,html[data-motion=off] .monster-alternate{transition:none!important}
+
+html[data-motion=off] .sky-bat{display:none}
