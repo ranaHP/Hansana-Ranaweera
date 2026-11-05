@@ -108,3 +108,14 @@ html[data-night-all=on] .night-archive-lights{background-color:#1c2b36}
 html[data-night-motion=off] .night-certificate-ghost{transition:none}
 
 @media(max-width:650px){html[data-theme=night] .cms-portfolio #credentials-list{grid-template-columns:minmax(0,1fr);gap:42px}html[data-theme=night] .cms-portfolio .credential-item.night-dark-card{min-height:300px;padding:24px}html[data-theme=night] .night-dark-card h3{font-size:21px}}
+
+/* Visitor color preference is independent of the CMS theme selection. */
+.cms-portfolio .color-mode-toggle{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:64px;min-height:36px;padding:7px 10px;border:1px solid var(--line);border-radius:20px;background:var(--soft);color:var(--ink);font:11px/1 'Segoe UI',Arial,sans-serif;cursor:pointer;flex-shrink:0}
+.color-mode-toggle>span:first-child{font-size:17px;line-height:1}.color-mode-toggle:focus-visible{outline:2px solid var(--blue);outline-offset:3px}.color-mode-toggle:hover{border-color:var(--blue)}
+.night-hero-wall-lamp{position:absolute;top:18px;width:38px;height:49px;filter:drop-shadow(0 0 5px #ffe3a2b0) drop-shadow(0 0 24px #ffcc7870);transition:filter .6s}
+.night-hero-wall-lamp svg{display:block;width:100%;height:100%}.night-hero-wall-left{left:20px}.night-hero-wall-right{right:46%}
+.night-hero-wall-wash{position:absolute;inset:0;background:radial-gradient(ellipse 200px 340px at 3% 7%,#ffdaa343,transparent 80%),radial-gradient(ellipse 230px 400px at 53% 7%,#ffd99b35,transparent 80%);mix-blend-mode:screen;transition:opacity .6s}
+html[data-night-wall=off] .night-hero-wall-wash{opacity:0}html[data-night-wall=off] .night-hero-wall-lamp{filter:brightness(.25)}
+html[data-theme=night][data-night-street=off][data-night-wall=on] .hero::after{background:radial-gradient(ellipse at 20% 8%,#01050b12,#01050b85 85%)}
+@media(max-width:650px){.cms-portfolio .color-mode-toggle{min-width:32px;min-height:32px;padding:6px}.color-mode-label{display:none}.cms-portfolio .header-tools{gap:8px}.night-hero-wall-lamp{top:47%;width:29px;height:40px}.night-hero-wall-left{left:12px}.night-hero-wall-right{right:12px}.night-hero-wall-wash{background:radial-gradient(ellipse 200px 260px at 3% 50%,#ffdaa335,transparent 80%),radial-gradient(ellipse 200px 260px at 97% 50%,#ffd99b35,transparent 80%)}}
+@media(prefers-reduced-motion:reduce){.night-hero-wall-lamp,.night-hero-wall-wash{transition:none}}

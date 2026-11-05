@@ -62,3 +62,11 @@ Branch `feature/interactive-night-world`: nine MongoDB test groups passed, inclu
 - Night archive uses one column on phones. Other theme styles remain scoped separately.
 - Browser verification: desktop torch reveal and ghost, Torch off, Light the street, wall lamp off, streetlamp off affecting photo/beam, completion record dialog, and 390px layout with no horizontal overflow. Physical touch hardware was not tested.
 - Proof: preview/realistic-night-hero.png, preview/realistic-night-archive.png, preview/realistic-night-mobile.png.
+
+
+### Visitor light/dark switch and hero wall lamps — 2026-11-05
+
+- Header Light/Dark button switches locally between the original light palette and After Hours. The visitor preference persists in localStorage; no CMS appearance data or admin settings are written. Without a preference, the published/scheduled theme remains the default. Authenticated draft previews retain the admin-selected preview theme and hide this visitor switch.
+- Two additional hero wall lanterns cast warm light over the scene and respond to the Wall light switch. Light mode removes the night scenery and lighting layers.
+- Verified in-browser: dark to light, light preference after reload, return to dark, two hero wall lamps, wall-light wash turning fully off, and theme switching at a 390px width without horizontal overflow.
+- Production build passed. Proof: preview/visitor-light-mode.png and preview/hero-wall-lights.png.
