@@ -1,50 +1,40 @@
-import React,{useEffect,useRef,useState} from 'react';
+import React,{useEffect,useRef} from 'react';
 
 export function NightCertificateGhost(){return <span className="night-certificate-ghost" aria-hidden="true"><Ghost/></span>;}
 export function NightArchiveLights(){return <div className="night-archive-lights" aria-hidden="true"><span><WallLamp/></span><span><WallLamp/></span><p>THE ARCHIVE AFTER DARK · MOVE OR TAP TO EXPLORE</p></div>;}
-export function NightHeroLamp(){return <div className="night-hero-lighting" aria-hidden="true"><div className="night-hero-wall-wash"/><span className="night-hero-wall-lamp night-hero-wall-left"><WallLamp/></span><span className="night-hero-wall-lamp night-hero-wall-right"><WallLamp/></span><div className="night-hero-beam"/><div className="night-hero-ground"/><div className="night-hero-lamppost"><StreetLamp/></div><div className="night-bulb-bloom"/></div>;}
+export function NightHeroLamp(){return <div className="night-hero-lighting" aria-hidden="true"><div className="night-hero-wall-wash"/><span className="night-hero-wall-lamp night-hero-wall-left"><WallLamp/></span><span className="night-hero-wall-lamp night-hero-wall-right"><WallLamp/></span></div>;}
 function Ghost(){return <svg viewBox="0 0 80 110" fill="none"><path d="M12 99V39C12 1 68 1 68 39V99L57 91L45 103L33 93L22 102Z" fill="#d3edf0" fillOpacity=".75"/><path d="M18 91V39C18 10 60 8 62 37" stroke="#f2ffff" strokeOpacity=".65"/><ellipse cx="30" cy="42" rx="4" ry="7" fill="#14212c"/><ellipse cx="50" cy="42" rx="4" ry="7" fill="#14212c"/><ellipse cx="40" cy="64" rx="5" ry="6" fill="#375564"/></svg>;}
-function StreetLamp(){return <svg viewBox="0 0 85 420" preserveAspectRatio="none" fill="none"><defs><linearGradient id="night-post"><stop stopColor="#060a0e"/><stop offset=".25" stopColor="#17212a"/><stop offset=".43" stopColor="#647079"/><stop offset=".55" stopColor="#303d45"/><stop offset="1" stopColor="#080e14"/></linearGradient><linearGradient id="night-glass" x2="0" y2="1"><stop stopColor="#fff9e4"/><stop offset=".3" stopColor="#ffdfa0"/><stop offset="1" stopColor="#bb7b32"/></linearGradient></defs><path d="M39 78H47V407H39Z" fill="url(#night-post)"/><path d="M32 403H54V414H60V420H25V414H32Z" fill="url(#night-post)"/><path d="M43 83V35Q43 9 65 16L73 22" stroke="url(#night-post)" strokeWidth="8"/><path d="M45 80V36Q45 14 64 19" stroke="#859099" strokeOpacity=".32"/><path d="M53 20L70 18L82 32H49Z" fill="url(#night-post)" stroke="#697176" strokeWidth=".5"/><path d="M51 34H80L76 49H56Z" fill="url(#night-glass)"/><path d="M52 34L57 48H60L56 34Z" fill="#fff" fillOpacity=".48"/><path d="M50 33H81M56 50H76" stroke="#455057" strokeWidth="2"/><path d="M42 92V389" stroke="#acc0ca" strokeOpacity=".12"/><circle cx="34" cy="415" r="1" fill="#7c898b"/><circle cx="52" cy="415" r="1" fill="#7c898b"/></svg>;}
 function WallLamp(){return <svg viewBox="0 0 70 85" fill="none"><defs><linearGradient id="night-wall-metal"><stop stopColor="#080c10"/><stop offset=".5" stopColor="#6b7171"/><stop offset="1" stopColor="#19212a"/></linearGradient><radialGradient id="night-wall-glass"><stop stopColor="#fffce8"/><stop offset=".35" stopColor="#ffe3a2"/><stop offset="1" stopColor="#ac712d"/></radialGradient></defs><rect x="29" y="4" width="12" height="76" rx="3" fill="url(#night-wall-metal)"/><path d="M14 23L34 8L56 23L50 65H20Z" fill="url(#night-wall-metal)" stroke="#7b8588" strokeWidth=".6"/><path d="M21 27H48L44 58H25Z" fill="url(#night-wall-glass)"/><path d="M24 28L27 57H30L27 28Z" fill="#fff" fillOpacity=".3"/><path d="M34 25V61M20 43H49" stroke="#252e32" strokeWidth="3"/><path d="M17 65H52L43 75H26Z" fill="url(#night-wall-metal)"/><path d="M19 23H51M25 66H46" stroke="#bec4bd" strokeOpacity=".4"/><circle cx="35" cy="79" r="1.3" fill="#7b8487"/></svg>;}
 
 export function NightPortraitScene(){return <div className="night-portrait-scene" aria-hidden="true"><div className="night-window"><i/><i/><i/><i/></div><div className="night-hero-moon"/><img src="/assets/seasonal/after-hours-street.svg" alt="" className="night-street-art"/><span className="night-street-sign">CURIOSITY LANE <b>↗</b></span><div className="night-wall-sconce"><WallLamp/></div><div className="night-hero-pool"/></div>;}
 
 const neighbors=[{id:'north',x:.965,y:.59},{id:'west',x:.035,y:.74},{id:'wanderer',x:.7,y:.86,mobileX:.82,mobileY:.8}];
+// Match the approved preset: torch on, fully illuminated, at dusk.
 export default function NightExperience({motionEnabled=true}){
- const [expanded,setExpanded]=useState(false);
- const [torch,setTorch]=useState(true),[street,setStreet]=useState(true),[wall,setWall]=useState(true),[all,setAll]=useState(false),[depth,setDepth]=useState(.8),[paused,setPaused]=useState(false),[found,setFound]=useState([]);
- const pointer=useRef({x:0,y:0}),frame=useRef(0),foundIds=useRef(new Set());
+ const pointer=useRef({x:0,y:0}),frame=useRef(0);
  useEffect(()=>{
   const html=document.documentElement;
-  html.dataset.nightTorch=torch?'on':'off';html.dataset.nightStreet=street||all?'on':'off';html.dataset.nightWall=wall||all?'on':'off';html.dataset.nightAll=all?'on':'off';html.dataset.nightMotion=paused||!motionEnabled?'off':'on';
-  html.style.setProperty('--night-depth',depth);html.style.setProperty('--night-torch-shadow',torch?'transparent':'#000');html.style.setProperty('--night-street-shadow',street||all?'transparent':'#000');html.style.setProperty('--night-wall-shadow',wall||all?'transparent':'#000');html.style.setProperty('--night-torch-mask',torch?'#000':'transparent');html.style.setProperty('--night-street-mask',street||all?'#000':'transparent');html.style.setProperty('--night-wall-mask',wall||all?'#000':'transparent');
-  if(all){foundIds.current=new Set(neighbors.map(n=>n.id));setFound([...foundIds.current]);}
- },[torch,street,wall,all,depth,paused,motionEnabled]);
+  html.dataset.nightTorch='on';html.dataset.nightWall='on';html.dataset.nightAll='on';html.dataset.nightMotion=motionEnabled?'on':'off';
+  html.style.setProperty('--night-depth',0);
+  html.style.setProperty('--night-torch-mask','#000');html.style.setProperty('--night-wall-mask','#000');html.style.setProperty('--night-street-mask','transparent');
+  html.style.setProperty('--night-torch-shadow','transparent');html.style.setProperty('--night-wall-shadow','transparent');html.style.setProperty('--night-street-shadow','#000');
+  return()=>{for(const key of ['nightTorch','nightStreet','nightWall','nightAll','nightMotion'])delete html.dataset[key];for(const v of ['--night-depth','--night-x','--night-y','--night-torch-mask','--night-street-mask','--night-wall-mask','--night-torch-shadow','--night-street-shadow','--night-wall-shadow'])html.style.removeProperty(v);};
+ },[motionEnabled]);
  useEffect(()=>{
   const update=()=>{
-   frame.current=0;const {x,y}=pointer.current,html=document.documentElement;
-   html.style.setProperty('--night-x',x+'px');html.style.setProperty('--night-y',y+'px');
+   frame.current=0;const {x,y}=pointer.current;
+   document.documentElement.style.setProperty('--night-x',x+'px');document.documentElement.style.setProperty('--night-y',y+'px');
    for(const area of document.querySelectorAll('.night-dark-card')){const r=area.getBoundingClientRect();if(r.bottom>=0&&r.top<=innerHeight){area.style.setProperty('--archive-x',(x-r.left)+'px');area.style.setProperty('--archive-y',(y-r.top)+'px');}}
-   if(torch&&!all)for(const n of neighbors){const gx=innerWidth<650?(n.mobileX??n.x):n.x,gy=innerWidth<650?(n.mobileY??n.y):n.y;if(Math.hypot(x-innerWidth*gx,y-innerHeight*gy)<90&&!foundIds.current.has(n.id)){foundIds.current.add(n.id);setFound([...foundIds.current]);}}
   };
-  const move=e=>{
-   if(e.target instanceof Element&&e.target.closest('[data-night-control]'))return;
-   if(e.type==='pointermove'&&e.pointerType!=='mouse')return;
-   pointer.current={x:e.clientX,y:e.clientY};if(!frame.current)frame.current=requestAnimationFrame(update);
-  };
-  const key=e=>{if(e.defaultPrevented||e.repeat||e.ctrlKey||e.metaKey||e.altKey)return;if(e.target instanceof Element&&e.target.closest('input,textarea,select,[contenteditable=true]')||document.querySelector('dialog[open]'))return;if(e.key.toLowerCase()==='f')setTorch(v=>!v);if(e.key.toLowerCase()==='l')setAll(v=>!v);};
-  const resize=()=>{pointer.current={x:Math.min(pointer.current.x,innerWidth*.9),y:Math.min(pointer.current.y,innerHeight*.9)};if(!frame.current)frame.current=requestAnimationFrame(update);};
-  window.addEventListener('scroll',resize,{passive:true});window.addEventListener('resize',resize);document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerdown',move,{passive:true});document.addEventListener('keydown',key);
+  const schedule=()=>{if(!frame.current)frame.current=requestAnimationFrame(update);};
+  const move=e=>{if(e.type==='pointermove'&&e.pointerType!=='mouse')return;pointer.current={x:e.clientX,y:e.clientY};schedule();};
+  window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule);document.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerdown',move,{passive:true});
   pointer.current={x:innerWidth*.7,y:innerHeight*.35};update();
-  return()=>{window.removeEventListener('scroll',resize);window.removeEventListener('resize',resize);document.removeEventListener('pointermove',move);document.removeEventListener('pointerdown',move);document.removeEventListener('keydown',key);cancelAnimationFrame(frame.current);};
- },[torch,all]);
- useEffect(()=>()=>{const h=document.documentElement;for(const key of ['nightTorch','nightStreet','nightWall','nightAll','nightMotion'])delete h.dataset[key];for(const v of ['--night-depth','--night-x','--night-y','--night-torch-mask','--night-street-mask','--night-wall-mask','--night-torch-shadow','--night-street-shadow','--night-wall-shadow'])h.style.removeProperty(v);},[]);
+  return()=>{window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);document.removeEventListener('pointermove',move);document.removeEventListener('pointerdown',move);cancelAnimationFrame(frame.current);};
+ },[]);
  return <>
-  <div className="night-environment" aria-hidden="true"><div className="night-sky"/><div className="night-stars"/><div className="night-haze"/><div className="night-brickwork night-reveal-mask"/><div className="night-street-pool"/><div className="night-wall-pool"/><div className="night-road-reflection"/></div>
-  <div className="night-neighbors night-reveal-mask" aria-hidden="true">{neighbors.map(n=><div key={n.id} className={'night-ghost '+(found.includes(n.id)?'is-found':'')} style={{'--ghost-x':n.x*100+'%','--ghost-y':n.y*100+'%','--ghost-mobile-x':(n.mobileX??n.x)*100+'%','--ghost-mobile-y':(n.mobileY??n.y)*100+'%',animationDelay:n.x*-10+'s'}}><Ghost/></div>)}</div>
-  <div className="night-shadow-overlay" aria-hidden="true"/><div className="night-torch-halo" aria-hidden="true"/><div className="night-torch-point" aria-hidden="true"/>
-  <div className="night-lamp night-street-lamp" data-night-control><div aria-hidden="true"><StreetLamp/></div><button type="button" aria-label="Streetlight" aria-pressed={street||all} title="Switch streetlight" onClick={()=>{if(all){setAll(false);setStreet(false);}else setStreet(v=>!v);}}><span className="sr-only">Streetlight</span></button></div>
-  <button type="button" className="night-lamp night-switch-wall" data-night-control aria-label="Wall light" aria-pressed={wall||all} title="Switch wall light" onClick={()=>{if(all){setAll(false);setWall(false);}else setWall(v=>!v);}}><WallLamp/></button>
-  <aside className="night-controls" data-expanded={expanded} data-night-control aria-label="Night exploration controls"><div className="night-controls-heading"><span>☾ AFTER HOURS</span><small role="status" aria-live="polite">{found.length} / 3 neighbors found</small><button type="button" className="night-expand" aria-label={expanded?'Close night controls':'Open night controls'} aria-expanded={expanded} onClick={()=>setExpanded(v=>!v)}>{expanded?'−':'+'}</button></div><p>Move your torch into the dark. On touch, tap to shine.</p><div className="night-control-actions"><button type="button" aria-label="Torch" aria-pressed={torch} aria-keyshortcuts="F" onClick={()=>setTorch(v=>!v)}>◉ Torch {torch?'on':'off'}</button><button type="button" aria-label="Light the street" aria-pressed={all} aria-keyshortcuts="L" onClick={()=>setAll(v=>!v)}>{all?'Return to shadows':'Light the street'}</button><button type="button" aria-label={paused?'Resume night ambience':'Pause night ambience'} aria-pressed={paused} disabled={!motionEnabled} onClick={()=>setPaused(v=>!v)}>{paused?'▷':'Ⅱ'}</button></div><label className="night-time"><span>Dusk</span><input type="range" min="0" max="1" step=".05" aria-label="Night depth" value={depth} onChange={e=>setDepth(Number(e.target.value))}/><span>Midnight</span></label></aside>
+  <div className="night-environment" aria-hidden="true"><div className="night-sky"/><div className="night-stars"/><div className="night-haze"/><div className="night-brickwork night-reveal-mask"/><div className="night-wall-pool"/></div>
+  <div className="night-neighbors night-reveal-mask" aria-hidden="true">{neighbors.map(n=><div key={n.id} className="night-ghost is-found" style={{'--ghost-x':n.x*100+'%','--ghost-y':n.y*100+'%','--ghost-mobile-x':(n.mobileX??n.x)*100+'%','--ghost-mobile-y':(n.mobileY??n.y)*100+'%',animationDelay:n.x*-10+'s'}}><Ghost/></div>)}</div>
+  <div className="night-torch-halo" aria-hidden="true"/><div className="night-torch-point" aria-hidden="true"/>
  </>;
 }

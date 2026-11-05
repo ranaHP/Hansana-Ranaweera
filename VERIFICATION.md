@@ -70,3 +70,11 @@ Branch `feature/interactive-night-world`: nine MongoDB test groups passed, inclu
 - Two additional hero wall lanterns cast warm light over the scene and respond to the Wall light switch. Light mode removes the night scenery and lighting layers.
 - Verified in-browser: dark to light, light preference after reload, return to dark, two hero wall lamps, wall-light wash turning fully off, and theme switching at a 390px width without horizontal overflow.
 - Production build passed. Proof: preview/visitor-light-mode.png and preview/hero-wall-lights.png.
+
+
+### Fixed dusk preset and simplified scene — 2026-11-05
+
+- Removed the hero streetlamp, floating streetlamp, streetlight spill/reflection, floating wall switch, and After Hours control panel.
+- The screenshot's preset is now fixed: torch on, all lighting on, depth 0 (Dusk). Removed the hidden F/L shortcuts as well, so typing cannot change the fixed lighting accidentally.
+- Kept wall lamps, ghosts, pointer glow, admin mode toggle, and the visitor Light/Dark button. Full illumination keeps certificates visible by default.
+- Build passed; browser reload confirmed zero streetlamp/control nodes, two hero wall lamps, depth 0, full lighting on, and certificate shadow opacity 0. Proof: preview/night-default-dusk.png.
