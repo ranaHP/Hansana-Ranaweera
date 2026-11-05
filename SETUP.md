@@ -1,6 +1,6 @@
 # Complete setup — React frontend, Node backend, MongoDB and admin
 
-Branch: **`feature/admin-seasonal-themes`**. This guide uses Node directly; Docker is optional and is not required for any step below.
+Branch: **`feature/interactive-night-world`**. This guide uses Node directly; Docker is optional and is not required for any step below.
 
 ## 1. Prerequisites and download
 
@@ -9,7 +9,7 @@ Branch: **`feature/admin-seasonal-themes`**. This guide uses Node directly; Dock
 - Run commands from the repository root unless a step says otherwise.
 
 ```powershell
-git clone --branch feature/admin-seasonal-themes https://github.com/ranaHP/Hansana-Ranaweera.git
+git clone --branch feature/interactive-night-world https://github.com/ranaHP/Hansana-Ranaweera.git
 cd Hansana-Ranaweera
 npm ci
 ```
@@ -18,7 +18,7 @@ For an existing clone:
 
 ```powershell
 git fetch origin
-git switch feature/admin-seasonal-themes
+git switch feature/interactive-night-world
 git pull --ff-only
 npm ci
 ```
@@ -196,3 +196,11 @@ The frontend proxy follows `PORT`; `BACKEND_URL` can override it if needed. The 
 ## Tech-Santa Christmas edition
 
 The Christmas switch applies the forest-green/gold palette, your AI-assisted tech-Santa portrait, illustrated gift boxes, reindeer, snowfall, evergreen scenery and softly glowing lights immediately. Halloween and Christmas are mutually exclusive. Off restores the previous Original/Custom preset; neither toggle publishes unrelated draft content. The Christmas Pause ambience button freezes festive motion; the Appearance animation/decor preferences and system reduced-motion settings remain respected.
+
+## After Hours: interactive night mode
+
+Admin has a **Night mode** switch alongside Halloween and Christmas. Turning on any of these three experiences turns the others off, and preserves unrelated drafts. Turning it off restores your previous Original/Custom theme.
+
+Night mode adds an illustrated evening street, switchable streetlight and wall lamp, warm pools of light, a pointer-controlled torch, revealed brick textures and three hidden ghosts. Move the mouse into dark areas or tap on touch devices to aim the torch. Project illustrations brighten when explored with the torch. Essential text and navigation stay readable.
+
+The Night controls include Torch (shortcut **F**), **Light the street** (shortcut **L**, reveals the hidden scenery and ghosts), Dusk → Midnight depth, and pause/resume ambience. Click the lamp heads to switch their light pools. Mobile controls collapse into a small bar and open with the + button. Keyboard shortcuts do not intercept browser Ctrl/Command shortcuts or input fields. System reduced-motion and admin animation/decor preferences are respected. These visitor controls are temporary; the global Night mode is saved through the admin.

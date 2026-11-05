@@ -48,3 +48,7 @@ MongoDB collections: `admins`, `sessions` (TTL expiry), `sites` (single `main` d
 ## Christmas and shared seasonal switching
 
 `PATCH /api/admin/christmas` accepts the same authenticated, CSRF-protected body as `/api/admin/halloween`. Both responses, admin-site loads and publish responses include `halloweenEnabled` and `christmasEnabled`. These are computed from one effective preset, so only one can be true. The shared seasonal update atomically preserves a non-seasonal restore point for both saved draft and published content. Turning either active mode off restores Original/Custom rather than reviving the other holiday. Existing Halloween restore metadata is accepted when it refers to a non-seasonal preset. Both routes retain version checks, snapshot history and theme-only publication.
+
+## Night mode
+
+`PATCH /api/admin/night` uses the same authenticated/CSRF-protected versioned body as the seasonal endpoints. Admin site, mode updates and publish responses include `nightEnabled`. Night, Halloween and Christmas share a single active preset and a non-experience restore point. Existing content remains schema-compatible; `night` is accepted as an appearance preset and schedule rule. Public query parameters cannot override the published choice. Individual visitor torch/lamp/ambience controls do not write to MongoDB.

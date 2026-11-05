@@ -34,13 +34,13 @@ export async function publishDraft(store,expectedVersion,actor){
 
 // A live mode change must not publish unrelated saved or unsaved draft content.
 export async function toggleSeasonalTheme(store,theme,{enabled,expectedVersion,expectedRevision},actor){
- if(!['halloween','christmas'].includes(theme))throw new Error('Unknown seasonal theme');
+ if(!['halloween','christmas','night'].includes(theme))throw new Error('Unknown seasonal theme');
  const doc=await store.Site.findById('main').lean();
  if(!doc||doc.draftVersion!==expectedVersion||doc.publishedRevision!==expectedRevision)return null;
  const restore=structuredClone(doc.seasonalRestore||doc.halloweenRestore||{});
  const change=(content,key)=>{
   const site=structuredClone(content),a=site.appearance;
-  const seasonal=['halloween','christmas'];
+  const seasonal=['halloween','christmas','night'];
   if(enabled&&!seasonal.includes(a.preset))restore[key]={preset:a.preset,seasonalDecor:a.seasonalDecor};
   const previous=restore[key]&&!seasonal.includes(restore[key].preset)?restore[key]:null;
   site.appearance={...a,preset:enabled?theme:a.preset===theme?(previous?.preset||'original'):a.preset,

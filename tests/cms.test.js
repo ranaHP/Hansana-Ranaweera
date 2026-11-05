@@ -51,3 +51,18 @@ test('Christmas toggle enables tech-Santa mode, excludes Halloween, and returns 
  const stop=await agent.patch('/api/admin/christmas').set('X-CSRF-Token',csrf).send({enabled:false,expectedVersion:again.body.draftVersion,expectedRevision:again.body.revision});
  assert.equal(stop.status,200);assert.equal(stop.body.christmasEnabled,false);assert.equal(stop.body.halloweenEnabled,false);assert.equal(stop.body.appearance.preset,'custom');
 });
+
+test('night experience is validated, mutually exclusive, draft-safe and reversible',async()=>{
+ const before=(await agent.get('/api/admin/site')).body;
+ const body={enabled:true,expectedVersion:before.draftVersion,expectedRevision:before.revision};
+ assert.equal((await request(app).patch('/api/admin/night').send(body)).status,401);
+ const on=await agent.patch('/api/admin/night').set('X-CSRF-Token',csrf).send(body);
+ assert.equal(on.status,200);assert.equal(on.body.nightEnabled,true);assert.equal(on.body.halloweenEnabled,false);assert.equal(on.body.christmasEnabled,false);
+ const live=(await request(app).get('/api/site')).body.site;
+ assert.equal(live.appearance.preset,'night');assert.equal(live.profile.firstName,'Hansana');assert.equal((await agent.get('/api/admin/site')).body.site.profile.firstName,'Unpublished draft name');
+ assert.equal((await agent.patch('/api/admin/night').set('X-CSRF-Token',csrf).send(body)).status,409);
+ const christmas=await agent.patch('/api/admin/christmas').set('X-CSRF-Token',csrf).send({enabled:true,expectedVersion:on.body.draftVersion,expectedRevision:on.body.revision});
+ assert.equal(christmas.status,200);assert.equal(christmas.body.nightEnabled,false);assert.equal(christmas.body.christmasEnabled,true);
+ const stop=await agent.patch('/api/admin/christmas').set('X-CSRF-Token',csrf).send({enabled:false,expectedVersion:christmas.body.draftVersion,expectedRevision:christmas.body.revision});
+ assert.equal(stop.status,200);assert.equal(stop.body.nightEnabled,false);assert.equal((await request(app).get('/api/site')).body.site.appearance.preset,'original');assert.equal(stop.body.appearance.preset,'custom');
+});

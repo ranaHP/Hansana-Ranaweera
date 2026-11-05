@@ -14,7 +14,7 @@ import {resolveTheme} from '../shared/themes.js';
 import {hashPassword,verifyPassword,randomToken,tokenHash,securityMiddleware} from './security.js';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const versionSchema=z.object({expectedVersion:z.number().int().positive()}).strict();
-const seasonalStatus=site=>{const theme=resolveTheme(site.appearance).preset;return {halloweenEnabled:theme==='halloween',christmasEnabled:theme==='christmas'};};
+const seasonalStatus=site=>{const theme=resolveTheme(site.appearance).preset;return {halloweenEnabled:theme==='halloween',christmasEnabled:theme==='christmas',nightEnabled:theme==='night'};};
 const conflict=res=>res.status(409).json({error:'A newer draft was saved in another window. Reload before saving.'});
 export async function createApp(store,options={}){
  const config={production:false,origins:['http://127.0.0.1:5173','http://localhost:5173','http://127.0.0.1:4000','http://localhost:4000'],cookieSecure:false,sessionHours:12,uploadsDir:path.join(root,'backend/uploads'),...options};
@@ -38,7 +38,7 @@ export async function createApp(store,options={}){
  app.get('/api/admin/site',async(req,res)=>{const doc=await store.Site.findById('main').lean();res.json({site:doc.draft,draftVersion:doc.draftVersion,revision:doc.publishedRevision,draftUpdatedAt:doc.draftUpdatedAt,publishedAt:doc.publishedAt,...seasonalStatus(doc.published)});});
  app.put('/api/admin/site',async(req,res)=>{const body=z.object({site:SiteSchema,expectedVersion:z.number().int().positive()}).strict().parse(req.body);const saved=await saveDraft(store,body.site,body.expectedVersion);if(!saved)return conflict(res);res.json({site:saved.draft,draftVersion:saved.draftVersion,revision:saved.publishedRevision,draftUpdatedAt:saved.draftUpdatedAt});});
  app.post('/api/admin/publish',async(req,res)=>{const {expectedVersion}=versionSchema.parse(req.body);const saved=await publishDraft(store,expectedVersion,req.admin.email);if(!saved)return conflict(res);for(const stream of streams)stream.write(`data: ${JSON.stringify({revision:saved.publishedRevision})}\n\n`);res.json({revision:saved.publishedRevision,publishedAt:saved.publishedAt,...seasonalStatus(saved.published)});});
- for(const theme of ['halloween','christmas'])app.patch('/api/admin/'+theme,async(req,res)=>{
+ for(const theme of ['halloween','christmas','night'])app.patch('/api/admin/'+theme,async(req,res)=>{
   const body=z.object({enabled:z.boolean(),expectedVersion:z.number().int().positive(),expectedRevision:z.number().int().positive()}).strict().parse(req.body);
   const saved=await toggleSeasonalTheme(store,theme,body,req.admin.email);
   if(!saved)return conflict(res);

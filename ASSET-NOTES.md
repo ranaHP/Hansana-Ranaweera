@@ -13,3 +13,5 @@ Halloween scenery in `frontend/public/assets/seasonal` consists of original SVG 
 `frontend/public/assets/seasonal/hansana-monster.png` is an AI-assisted, non-gory Halloween transformation of the supplied portrait, generated on 2 November 2026 for the face interaction. The normal portrait is preserved. Webs, spiders and flying bats are original SVG/CSS artwork.
 
 `frontend/public/assets/seasonal/hansana-tech-santa.png` is an AI-assisted Christmas costume edit of the supplied portrait, generated on 2 November 2026. The original face remains recognizable; the original portrait is preserved. Winter scenery, gifts and reindeer use original SVG/CSS artwork.
+
+After Hours uses original SVG street architecture, lamp fixtures and ghost illustrations authored in code. No new portrait edit or remote image service is used for this mode. The user's original portrait remains the night-mode portrait.

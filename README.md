@@ -3,7 +3,7 @@
 A complete React, Express/Node.js and MongoDB portfolio project. The existing Systems Garden design, portraits, animated tech icons, original completion images and interactive Three.js world are retained. The public website reads published content from MongoDB. `/admin` is a separate authenticated React dashboard.
 
 
-**Start here: [complete configuration guide](SETUP.md).** This branch adds an immediate, one-click Halloween and Christmas controls to the admin.
+**Start here: [complete configuration guide](SETUP.md).** This branch adds an immediate, one-click Halloween, Christmas and Night controls to the admin.
 
 ## Repository structure
 
@@ -144,7 +144,7 @@ tests/cms.test.js              Integration tests
 
 The document tree is rendered with React elements, not an iframe or injected HTML. The admin preview iframe is only a preview of the same React application. Draft and published documents are independently stored in MongoDB. There is one portfolio and one admin role; use the admin creation command for additional trusted administrators. No analytics, tracking, cloud dependency or external messaging service is added.
 
-Validation performed: production build; six MongoDB integration/theme test groups; browser checks for sign-in, saved draft preview, hero controls, theme publish/restore, search, credentials and responsive layout. See `VERIFICATION.md` for exact results and limitations.
+Validation performed: production build; MongoDB integration, theme and mode test groups; browser checks for sign-in, saved draft preview, hero controls, theme publish/restore, search, credentials and responsive layout. See `VERIFICATION.md` for exact results and limitations.
 
 ## Halloween atmosphere
 
@@ -161,3 +161,11 @@ Page-wide bats, gently dimming edge lanterns, corner webs and hanging spiders ar
 ## Tech-Santa Christmas edition
 
 The Christmas switch applies the forest-green/gold palette, your AI-assisted tech-Santa portrait, illustrated gift boxes, reindeer, snowfall, evergreen scenery and softly glowing lights immediately. Halloween and Christmas are mutually exclusive. Off restores the previous Original/Custom preset; neither toggle publishes unrelated draft content. The Christmas Pause ambience button freezes festive motion; the Appearance animation/decor preferences and system reduced-motion settings remain respected.
+
+## After Hours: interactive night mode
+
+Admin has a **Night mode** switch alongside Halloween and Christmas. Turning on any of these three experiences turns the others off, and preserves unrelated drafts. Turning it off restores your previous Original/Custom theme.
+
+Night mode adds an illustrated evening street, switchable streetlight and wall lamp, warm pools of light, a pointer-controlled torch, revealed brick textures and three hidden ghosts. Move the mouse into dark areas or tap on touch devices to aim the torch. Project illustrations brighten when explored with the torch. Essential text and navigation stay readable.
+
+The Night controls include Torch (shortcut **F**), **Light the street** (shortcut **L**, reveals the hidden scenery and ghosts), Dusk → Midnight depth, and pause/resume ambience. Click the lamp heads to switch their light pools. Mobile controls collapse into a small bar and open with the + button. Keyboard shortcuts do not intercept browser Ctrl/Command shortcuts or input fields. System reduced-motion and admin animation/decor preferences are respected. These visitor controls are temporary; the global Night mode is saved through the admin.
