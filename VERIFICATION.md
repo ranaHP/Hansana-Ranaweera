@@ -52,3 +52,13 @@ Branch `feature/admin-seasonal-themes`: eight MongoDB integration test groups pa
 ## After Hours — 5 November 2026
 
 Branch `feature/interactive-night-world`: nine MongoDB test groups passed, including the new night preset, authenticated/versioned mode update, exclusion of other experiences, preservation of unpublished drafts and restoration to normal themes. Production React build and asset checks passed. Browser checks verified pointer-position updates, discovering ghosts in dark corners, independent street/wall switches, full illumination removing shadow masks, dusk/midnight depth and pausing ghost ambience. At 390px there was no horizontal overflow; controls collapsed to a 46px bar, expanded successfully, and the mobile ghost position was discoverable. The full-light control also worked on mobile. Mouse input is throttled through requestAnimationFrame without per-frame React renders; controls do not intercept navigation or text input shortcuts. Original portrait is preserved.
+
+
+### Realistic night lighting refinement — 2026-11-05
+
+- Hero now contains a metal-and-glass streetlamp with a soft warm cone, ground reflection, portrait illumination and a shadow layer. The existing Streetlight switch dims the portrait and extinguishes the beam.
+- Credentials have a near-black shadow layer over the actual content. Pointer movement and touch pointer-down position a soft torch opening in local card coordinates; scrolling updates the coordinates. Issuer logos, titles and completion links remain real accessible DOM content.
+- Metal wall lanterns illuminate the archive wall; Wall light switches off their spill. Ghosts rise behind hovered certificate cards and the recognition panel. Keyboard focus reveals a whole card, Light the street reveals all cards, and reduced-motion/pause settings remove ghost transitions.
+- Night archive uses one column on phones. Other theme styles remain scoped separately.
+- Browser verification: desktop torch reveal and ghost, Torch off, Light the street, wall lamp off, streetlamp off affecting photo/beam, completion record dialog, and 390px layout with no horizontal overflow. Physical touch hardware was not tested.
+- Proof: preview/realistic-night-hero.png, preview/realistic-night-archive.png, preview/realistic-night-mobile.png.

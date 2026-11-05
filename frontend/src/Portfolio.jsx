@@ -2,7 +2,7 @@ import React,{createElement,useEffect,useRef,useState} from 'react';
 import {resolveTheme} from '../../shared/themes.js';
 import HalloweenAtmosphere,{HalloweenPortrait} from './HalloweenAtmosphere.jsx';
 import MonsterPortrait from './MonsterPortrait.jsx';
-import NightExperience,{NightPortraitScene} from './NightExperience.jsx';
+import NightExperience,{NightPortraitScene,NightHeroLamp,NightArchiveLights,NightCertificateGhost} from './NightExperience.jsx';
 import ChristmasAtmosphere,{ChristmasPortrait} from './ChristmasAtmosphere.jsx';
 import './styles/styles.css';import './styles/portrait.css';import './styles/credentials.css';import './styles/hero-layout.css';import './styles/cms.css';import './styles/halloween.css';import './styles/christmas.css';import './styles/night.css';
 const valueAt=(o,p)=>p.split('.').reduce((v,k)=>v?.[k],o);
@@ -30,7 +30,7 @@ export default function Portfolio({site:s,preview}){
   if(id==='skills-list')return s.data.skills.map(v=><details className="skill-item" key={v.id}><summary><span className="eyebrow">{v.level}</span><h3>{v.title}</h3><p>{v.summary}</p></summary><p>{v.detail}</p></details>);
   if(id==='timeline')return s.data.experience.map(v=><article className="timeline-item" key={v.id}><time>{v.period}</time><div><h3>{v.title}</h3><p className="timeline-company">{v.company}</p><p className="timeline-description">{v.description}</p></div></article>);
   if(id==='education')return s.data.education.map(v=><article key={v.id}><h3>{v.title}</h3><p>{v.institution} · {v.period}</p><p>{v.description}</p></article>);
-  if(id==='credentials-list')return s.data.certificates.filter(v=>courseFilter==='all'||v.group===courseFilter||(courseFilter==='Software'&&v.group==='Product')).map(v=><article className="credential-item" key={v.id}><div className="credential-brand"><img src={v.logo} alt="" loading="lazy"/><span>{v.issuer}</span></div><h3>{v.title}</h3><p className="credential-evidence">{v.evidenceLabel}</p><button data-credential={v.id}>{L.viewRecord}</button></article>);
+  if(id==='credentials-list')return s.data.certificates.filter(v=>courseFilter==='all'||v.group===courseFilter||(courseFilter==='Software'&&v.group==='Product')).map(v=><article className={"credential-item"+(theme.preset==='night'&&s.appearance.seasonalDecor?' night-dark-card':'')} key={v.id}>{theme.preset==='night'&&s.appearance.seasonalDecor&&<NightCertificateGhost/>}<div className="credential-brand"><img src={v.logo} alt="" loading="lazy"/><span>{v.issuer}</span></div><h3>{v.title}</h3><p className="credential-evidence">{v.evidenceLabel}</p><button data-credential={v.id}>{L.viewRecord}</button></article>);
   if(id==='additional-list')return s.data.additionalCourses.map(v=><p key={v.id}><strong>{v.title}</strong><br/>{v.issuer} · {v.year}</p>);
   if(id==='lab-list')return s.data.lab.filter(v=>labFilter==='all'||v.category===labFilter).map(p=><article className="lab-item" key={p.id}><button data-project={p.id}><span className="lab-status">{p.status}</span><h3>{p.title}</h3><p>{p.summary}</p><span className="lab-arrow">↗</span></button></article>);
   if(id==='method-steps')return s.data.methods.map((v,i)=><button key={v.id} data-step={i} aria-pressed={i===step}>{v.title}</button>);
@@ -56,6 +56,7 @@ export default function Portfolio({site:s,preview}){
   if(cls==='hero-portrait'&&theme.preset==='halloween'&&s.appearance.seasonalDecor)children=[<HalloweenPortrait key="halloween-scene"/>,...children];
   if(cls==='hero-portrait'&&theme.preset==='christmas'&&s.appearance.seasonalDecor)children=[<ChristmasPortrait key="christmas-scene"/>,...children];
   if(cls==='hero-portrait'&&theme.preset==='night'&&s.appearance.seasonalDecor)children=[<NightPortraitScene key="night-scene"/>,...children];
+  if(theme.preset==='night'&&s.appearance.seasonalDecor){if(id==='about')children=[...children,<NightHeroLamp key="hero-lamp"/>];if(id==='credentials')children=[<NightArchiveLights key="archive-lamps"/>,...children];if(id==='recognition'||cls==='recognition'){props.className=(props.className||'')+' night-dark-card night-dark-awards';children=[<NightCertificateGhost key="award-ghost"/>,...React.Children.toArray(children)];}}
   if(id==='about'&&h.backgroundImage)props.style={...props.style,backgroundImage:`url(${JSON.stringify(h.backgroundImage)})`,backgroundSize:'cover',backgroundBlendMode:'soft-light'};
   if(n.tag==='picture'&&mode==='immersive'&&theme.preset==='halloween'&&s.appearance.seasonalDecor&&n.children.some(child=>child.attrs?.src?.includes('hero.portrait')))return <MonsterPortrait key={key} pictureProps={props} layoutKey={[h.imageScale,h.imageX,h.imageY,h.imageTop,h.imageBottom,h.imageInsetX,h.mobileImageScale,h.mobilePortraitRatio].join(',')}>{children}</MonsterPortrait>;
   if(['img','source','br'].includes(n.tag))return createElement(n.tag,props);
